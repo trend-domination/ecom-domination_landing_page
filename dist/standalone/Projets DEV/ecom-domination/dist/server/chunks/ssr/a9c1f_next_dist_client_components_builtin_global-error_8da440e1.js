@@ -1,0 +1,3 @@
+module.exports=[83276,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(11911);a.n(d("[project]/Projets DEV/ecom-domination/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},43161,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(11911);a.n(d("[project]/Projets DEV/ecom-domination/node_modules/next/dist/client/components/builtin/global-error.js"))},63791,a=>{"use strict";a.i(83276);var b=a.i(43161);a.n(b)}];
+
+//# sourceMappingURL=a9c1f_next_dist_client_components_builtin_global-error_8da440e1.js.map
