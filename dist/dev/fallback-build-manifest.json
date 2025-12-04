@@ -1,6 +1,31 @@
 {
   "pages": {
-    "/_app": []
+    "/_app": [
+      "static/chunks/a9c1f_next_dist_compiled_cdbaf6f5._.js",
+      "static/chunks/a9c1f_next_dist_shared_lib_688dfc3a._.js",
+      "static/chunks/a9c1f_next_dist_client_ec8109d4._.js",
+      "static/chunks/a9c1f_next_dist_db2903d9._.js",
+      "static/chunks/a9c1f_next_app_86ed8870.js",
+      "static/chunks/[next]_entry_page-loader_ts_845d733d._.js",
+      "static/chunks/a9c1f_react-dom_fdc2b5c1._.js",
+      "static/chunks/a9c1f_1e7b4f09._.js",
+      "static/chunks/[root-of-the-server]__e04fec60._.js",
+      "static/chunks/Projets DEV_ecom-domination_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-Projets DEV_ecom-domination_pages__app_04d0e873._.js"
+    ],
+    "/_error": [
+      "static/chunks/a9c1f_next_dist_compiled_cdbaf6f5._.js",
+      "static/chunks/a9c1f_next_dist_shared_lib_08bad7fb._.js",
+      "static/chunks/a9c1f_next_dist_client_ec8109d4._.js",
+      "static/chunks/a9c1f_next_dist_89e243a9._.js",
+      "static/chunks/a9c1f_next_error_8899e181.js",
+      "static/chunks/[next]_entry_page-loader_ts_d660c38d._.js",
+      "static/chunks/a9c1f_react-dom_fdc2b5c1._.js",
+      "static/chunks/a9c1f_1e7b4f09._.js",
+      "static/chunks/[root-of-the-server]__d57fa4b3._.js",
+      "static/chunks/Projets DEV_ecom-domination_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-Projets DEV_ecom-domination_pages__error_42357768._.js"
+    ]
   },
   "devFiles": [],
   "polyfillFiles": [],

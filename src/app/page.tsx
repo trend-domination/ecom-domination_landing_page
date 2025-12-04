@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -12,20 +12,39 @@ const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.08 } },
 };
+const scaleIn: Variants = {
+  hidden: { opacity: 0, scale: 0.98, y: 14 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
   useEffect(() => {
+    if (!menuOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMenuOpen(false); };
-    const onClick = (e: MouseEvent) => { if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false); };
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as Node;
+      const clickedTrigger = !!(triggerRef.current && triggerRef.current.contains(target));
+      const clickedInsideMenu = !!(menuRef.current && menuRef.current.contains(target));
+      if (!clickedInsideMenu && !clickedTrigger) setMenuOpen(false);
+    };
     document.addEventListener("keydown", onKey);
     document.addEventListener("click", onClick);
     return () => {
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("click", onClick);
+      document.body.style.overflow = prevOverflow;
     };
-  }, []);
+  }, [menuOpen]);
 
   // Carousel Témoignages
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -33,17 +52,31 @@ export default function Home() {
   const [autoPlay, setAutoPlay] = useState(true);
   const autoPlayRef = useRef<boolean>(true);
   useEffect(() => { autoPlayRef.current = autoPlay; }, [autoPlay]);
+
+  // Géométrie du carousel: calcule pages/dots à partir de la largeur visible
+  const getCarouselGeometry = () => {
+    const el = trackRef.current; if (!el) return null;
+    const style = getComputedStyle(el); const gap = parseFloat(style.gap) || 24;
+    const card = el.querySelector('.testimonial-card') as HTMLElement | null; if (!card) return null;
+    const cardWidth = card.getBoundingClientRect().width;
+    const maxScroll = Math.max(0, el.scrollWidth - el.clientWidth - 1);
+    // Prendre en compte le padding horizontal du track (défini en CSS)
+    const paddingLeft = parseFloat(style.paddingLeft || '0') || 0;
+    const paddingRight = parseFloat(style.paddingRight || '0') || 0;
+    const minScroll = paddingLeft; // premier dot aligné au début réel
+    const effectiveMax = Math.max(0, maxScroll + paddingLeft); // fin réelle au dernier dot
+    const dots = document.querySelectorAll('.testimonials-dots .dot').length || 1;
+    const dotStep = dots > 1 ? (effectiveMax - minScroll) / (dots - 1) : 0;
+    return { el, gap, cardWidth, maxScroll: effectiveMax, dots, dotStep, minScroll };
+  };
+
   const getMaxIndex = () => {
-    const el = trackRef.current; if (!el) return 0;
-    const cards = el.querySelectorAll('.testimonial-card').length;
-    return Math.max(0, cards - 1);
+    const dots = document.querySelectorAll('.testimonials-dots .dot');
+    return Math.max(0, dots.length - 1);
   };
   const scrollToSlide = (i: number) => {
-    const el = trackRef.current; if (!el) return;
-    const card = el.querySelector('.testimonial-card') as HTMLElement | null; if (!card) return;
-    const style = getComputedStyle(el); const gap = parseFloat(style.gap) || 24;
-    const rect = card.getBoundingClientRect();
-    const step = rect.width + gap;
+    const g = getCarouselGeometry(); if (!g) return;
+    const { el, dotStep, minScroll, maxScroll } = g as { el: HTMLDivElement; dotStep: number; minScroll: number; maxScroll: number };
     const maxI = getMaxIndex();
     const target = Math.max(0, Math.min(maxI, i));
     // pause autoplay le temps du scroll smooth
@@ -51,42 +84,32 @@ export default function Home() {
     // disable scroll snap during programmatic scroll to avoid overshoot
     const prevSnap = el.style.scrollSnapType;
     el.style.scrollSnapType = 'none';
-    el.scrollTo({ left: target * step, behavior: 'smooth' });
+    const left = minScroll + target * (dotStep || 0);
+    el.scrollTo({ left, behavior: 'smooth' });
     setActiveSlide(target);
     window.setTimeout(() => {
       el.style.scrollSnapType = prevSnap || '';
       setAutoPlay(true);
+      // wrap si on est à la fin
+      const end = Math.max(0, maxScroll - 0.5);
+      if (el.scrollLeft >= end) { el.scrollLeft = minScroll; setActiveSlide(0); }
     }, 500);
   };
 
   // synchroniser l’état actif avec le scroll continu
-  useEffect(() => {
-    const el = trackRef.current; if (!el) return;
-    const card = el.querySelector('.testimonial-card') as HTMLElement | null; if (!card) return;
-    const style = getComputedStyle(el); const gap = parseFloat(style.gap) || 24;
-    const step = card.offsetWidth + gap;
-    const onScroll = () => {
-      const i = Math.round(el.scrollLeft / step);
-      const maxI = getMaxIndex();
-      setActiveSlide(Math.max(0, Math.min(maxI, i)));
-    };
-    el.addEventListener('scroll', onScroll, { passive: true } as any);
-    return () => { el.removeEventListener('scroll', onScroll); };
-  }, []);
-
 
   useEffect(() => {
     const el = trackRef.current; if (!el) return;
     const onScroll = () => {
-      const card = el.querySelector('.testimonial-card') as HTMLElement | null; if (!card) return;
-      const style = getComputedStyle(el); const gap = parseFloat(style.gap) || 24;
-      const step = card.offsetWidth + gap;
-      const i = Math.round(el.scrollLeft / step);
+      const g = getCarouselGeometry(); if (!g) return;
+      const { dotStep, minScroll } = g as { dotStep: number; minScroll: number };
+      const base = Math.max(0, (Number.isFinite(el.scrollLeft) ? el.scrollLeft : 0) - (minScroll || 0));
+      const i = dotStep > 0 ? Math.round(base / dotStep) : 0;
       const maxI = getMaxIndex();
       setActiveSlide(Math.max(0, Math.min(maxI, i)));
     };
-    el.addEventListener('scroll', onScroll, { passive: true } as any);
-    return () => { el.removeEventListener('scroll', onScroll); };
+    el.addEventListener('scroll', onScroll, { passive: true } as AddEventListenerOptions);
+    return () => { el.removeEventListener('scroll', onScroll as EventListener); };
   }, []);
 
 
@@ -94,21 +117,154 @@ export default function Home() {
     const el = trackRef.current;
     if (!el || !autoPlay) return;
     let rafId = 0;
+    // Désactiver le snap et le scroll lissé pendant l’autoplay pour éviter les “poses” au premier dot
+    const prevSnap = el.style.scrollSnapType;
+    const prevBehavior = el.style.scrollBehavior;
+    el.style.scrollSnapType = 'none';
+    el.style.scrollBehavior = 'auto';
     const speed = 2.2; // pixels per frame
+    const geom = getCarouselGeometry(); if (!geom) return; const { minScroll, maxScroll } = geom as { minScroll: number; maxScroll: number };
     const step = () => {
-      const maxScroll = el.scrollWidth - el.clientWidth;
-      if (autoPlayRef.current) {
-        let nextLeft = el.scrollLeft + speed;
-        if (nextLeft >= maxScroll) {
-          nextLeft = nextLeft % maxScroll; // wrap seamlessly
-        }
-        el.scrollLeft = nextLeft;
+      const end = Math.max(0, maxScroll - 0.5);
+      if (!autoPlayRef.current) { rafId = requestAnimationFrame(step); return; }
+      if (maxScroll <= 0) { el.scrollLeft = minScroll; rafId = requestAnimationFrame(step); return; }
+      let nextLeft = (Number.isFinite(el.scrollLeft) ? el.scrollLeft : minScroll) + speed;
+      // léger headroom pour éviter l’arrondi au dot précédent
+      if (nextLeft >= end) {
+        nextLeft = minScroll; // wrap et resynchronise au premier dot réel
+        setActiveSlide(0);
       }
+      el.scrollLeft = nextLeft;
       rafId = requestAnimationFrame(step);
     };
     rafId = requestAnimationFrame(step);
-    return () => { if (rafId) cancelAnimationFrame(rafId); };
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      el.style.scrollSnapType = prevSnap || '';
+      el.style.scrollBehavior = prevBehavior || '';
+    };
   }, [autoPlay]);
+
+  // Configuration des gestes (sensibilité et inertie)
+  const gestureConfig = {
+    momentumFriction: 0.92, // facteur de décélération par frame
+    momentumMinVelocity: 0.06, // px/ms en dessous duquel on arrête
+    swipeThresholdPx: 30, // distance minimale pour déclencher un swipe tactile
+    autoplayResumeDelayMs: 500, // délai avant reprise de l’autoplay après interaction
+  };
+
+  // Gestes souris/tactiles: drag, wheel, momentum et swipe
+  useEffect(() => {
+    const el = trackRef.current; if (!el) return;
+    const geom = getCarouselGeometry();
+    const minScroll = geom?.minScroll || 0;
+    const maxScroll = geom?.maxScroll || 0;
+    const dotStep = geom?.dotStep || 0;
+
+    let isDown = false; let startX = 0; let startLeft = 0;
+    let lastX = 0; let lastT = 0; let velocity = 0; // px/ms
+    let wheelTimeout = 0; let cancelMomentum: (() => void) | null = null;
+    let prevSnap = ''; let prevBehavior = '';
+
+    const onPointerDown = (e: PointerEvent) => {
+      if (e.button !== 0 && e.pointerType !== 'touch') return; // clic gauche ou tactile
+      isDown = true;
+      prevSnap = el.style.scrollSnapType;
+      prevBehavior = el.style.scrollBehavior;
+      el.style.scrollSnapType = 'none';
+      el.style.scrollBehavior = 'auto';
+      el.classList.add('dragging');
+      startX = e.clientX; lastX = e.clientX; lastT = performance.now();
+      startLeft = Number.isFinite(el.scrollLeft) ? el.scrollLeft : minScroll;
+      velocity = 0;
+      setAutoPlay(false);
+      try { el.setPointerCapture(e.pointerId); } catch { /* noop */ }
+      // arrêter une éventuelle inertie en cours
+      if (cancelMomentum) { cancelMomentum(); cancelMomentum = null; }
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!isDown) return;
+      const now = performance.now();
+      const dx = e.clientX - startX;
+      const dX = e.clientX - lastX;
+      const dt = Math.max(1, now - lastT);
+      velocity = dX / dt; // px/ms
+      lastX = e.clientX; lastT = now;
+      let next = startLeft - dx;
+      if (next < minScroll) next = minScroll;
+      if (next > maxScroll) next = maxScroll;
+      el.scrollLeft = next;
+    };
+
+    const startMomentum = (initialVelocity: number) => {
+      let v = initialVelocity; let raf = 0;
+      const step = () => {
+        v *= gestureConfig.momentumFriction;
+        if (Math.abs(v) < gestureConfig.momentumMinVelocity) {
+          el.style.scrollSnapType = prevSnap || '';
+          el.style.scrollBehavior = prevBehavior || '';
+          window.setTimeout(() => setAutoPlay(true), gestureConfig.autoplayResumeDelayMs);
+          return;
+        }
+        let next = el.scrollLeft - v * 16; // ~16ms par frame
+        if (next < minScroll) { next = minScroll; v = 0; }
+        if (next > maxScroll) { next = maxScroll; v = 0; }
+        el.scrollLeft = next;
+        raf = requestAnimationFrame(step);
+      };
+      raf = requestAnimationFrame(step);
+      return () => { if (raf) cancelAnimationFrame(raf); };
+    };
+
+    const onPointerUp = (e: PointerEvent) => {
+      if (!isDown) return;
+      isDown = false;
+      el.classList.remove('dragging');
+      try { el.releasePointerCapture(e.pointerId); } catch { /* noop */ }
+      const totalDx = e.clientX - startX;
+      // Swipe tactile: si dépasse le seuil on va au dot suivant/précédent
+      if (e.pointerType === 'touch' && dotStep > 0 && Math.abs(totalDx) >= gestureConfig.swipeThresholdPx) {
+        const direction = totalDx < 0 ? 1 : -1;
+        scrollToSlide(activeSlide + direction);
+        return;
+      }
+      // Sinon on lance l’inertie
+      cancelMomentum = startMomentum(velocity);
+    };
+
+    const onWheel = (e: WheelEvent) => {
+      const delta = Math.abs(e.deltaX) > 0 ? e.deltaX : e.deltaY;
+      if (delta !== 0) {
+        e.preventDefault();
+        setAutoPlay(false);
+        const current = Number.isFinite(el.scrollLeft) ? el.scrollLeft : minScroll;
+        let next = current + delta;
+        if (next < minScroll) next = minScroll;
+        if (next > maxScroll) next = maxScroll;
+        el.scrollLeft = next;
+        window.clearTimeout(wheelTimeout);
+        wheelTimeout = window.setTimeout(() => setAutoPlay(true), gestureConfig.autoplayResumeDelayMs);
+      }
+    };
+
+    el.addEventListener('pointerdown', onPointerDown as EventListener);
+    window.addEventListener('pointermove', onPointerMove as EventListener);
+    window.addEventListener('pointerup', onPointerUp as EventListener);
+    el.addEventListener('wheel', onWheel, { passive: false } as AddEventListenerOptions);
+
+    return () => {
+      el.removeEventListener('pointerdown', onPointerDown as EventListener);
+      window.removeEventListener('pointermove', onPointerMove as EventListener);
+      window.removeEventListener('pointerup', onPointerUp as EventListener);
+      el.removeEventListener('wheel', onWheel as EventListener);
+      if (wheelTimeout) window.clearTimeout(wheelTimeout);
+      el.classList.remove('dragging');
+      el.style.scrollSnapType = prevSnap || '';
+      el.style.scrollBehavior = prevBehavior || '';
+      if (cancelMomentum) cancelMomentum();
+    };
+  }, [activeSlide]);
 
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(null);
 
@@ -152,29 +308,41 @@ export default function Home() {
                 aria-expanded={menuOpen}
                 aria-controls="topmenu"
                 onClick={() => setMenuOpen((v) => !v)}
+                ref={triggerRef}
               >
                 <span>Menu</span>
                 <svg className={`chevron ${menuOpen ? "open" : ""}`} width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path d="M7 10l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
-              <div ref={menuRef} id="topmenu" className={`menu-popover ${menuOpen ? "open" : ""}`} role="menu">
-                <ul className="menu-list">
-                  <li><a href="#services" className="menu-item" role="menuitem">Découvrir nos services</a></li>
-                  <li><a href="#pricing" className="menu-item" role="menuitem">Voir les tarifs</a></li>
-                  <li><a href="#portfolio" className="menu-item" role="menuitem">Portfolio</a></li>
-                  <li>
-                    <a href="https://wa.me/message/URL4FFGHMAQLD1" className="menu-item" role="menuitem" target="_blank" rel="noopener noreferrer">
-                      <span className="menu-icon" aria-hidden>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12.04 2C6.57 2 2.2 6.37 2.2 11.84c0 2.06.63 3.98 1.71 5.56L2 22l4.73-1.86c1.53.96 3.33 1.52 5.3 1.52 5.47 0 9.84-4.37 9.84-9.84S17.51 2 12.04 2zm5.77 14.07c-.25.71-1.45 1.3-2.01 1.32-.54.02-1.22.08-3.94-1.26-3.32-1.63-5.45-5.69-5.62-5.96-.17-.27-1.35-1.8-1.35-3.43s.84-2.47 1.14-2.81c.3-.34.66-.43.88-.43.22 0 .44.01.64.01.21 0 .49-.08.77.59.28.67.95 2.33 1.03 2.5.08.17.13.37.02.6-.11.23-.17.37-.33.57-.16.2-.34.45-.49.6-.16.15-.33.32-.14.66.19.34.84 1.38 1.81 2.24 1.25 1.12 2.31 1.46 2.65 1.62.34.16.53.14.73-.09.2-.23.84-.98 1.06-1.32.22-.34.45-.28.75-.17.3.11 1.9.9 2.22 1.06.32.16.54.25.62.39.08.14.08.81-.17 1.52z" fill="#25D366"/>
-                        </svg>
-                      </span>
-                      WhatsApp
-                    </a>
-                  </li>
-                </ul>
-              </div>
+             <AnimatePresence>
+             {menuOpen && (
+               <motion.div
+                 ref={menuRef}
+                 id="topmenu"
+                 className="menu-overlay"
+                 role="dialog"
+                 aria-modal="true"
+                 initial={{ y: "-100%", opacity: 0 }}
+                 animate={{ y: 0, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } }}
+                 exit={{ y: "-100%", opacity: 0, transition: { duration: 0.3, ease: "easeIn" } }}
+               >
+                 <div className="menu-overlay-top">
+                   <div className="menu-overlay-brand">
+                     <Image src="/assets/img/ECOM ICON A.png" alt="Logo EcomDomination" width={40} height={40} className="brand-logo" />
+                     <span className="brand-ecom">EcomDomination</span>
+                     <sup className="brand-registered">®</sup>
+                   </div>
+                   <button className="menu-overlay-close" onClick={() => setMenuOpen(false)} aria-label="Fermer le menu">Fermer</button>
+                 </div>
+                 <ul className="menu-overlay-list">
+                   <li><a href="/" className="menu-overlay-link" onClick={() => setMenuOpen(false)}>Accueil</a></li>
+                   <li><a href="#services" className="menu-overlay-link" onClick={() => setMenuOpen(false)}>Services</a></li>
+                   <li><a href="#blog" className="menu-overlay-link" onClick={() => setMenuOpen(false)}>Blog</a></li>
+                 </ul>
+               </motion.div>
+             )}
+             </AnimatePresence>
             </div>
           </nav>
         </div>
@@ -361,14 +529,14 @@ export default function Home() {
 
       <div className="col-span-12">
         {/* Process */}
-        <section className="process-section">
+        <motion.section className="process-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <div className="process-wrap">
             <span className="process-pill">Comment ça marche</span>
                 
             <h2 className="process-title">Découvrez un <em>processus clair</em> pour un<br/>e-commerce professionnel et rentable.</h2>
             <div className="process-grid">
               {/* Subscribe */}
-              <article className="process-card">
+              <motion.article className="process-card" variants={fadeUp} whileHover={{ y: -3 }}>
                 <div className="process-card-head">
                   <div className="pricing-panel">
                     <div className="brand-mark">EcomDomination<sup>®</sup></div>
@@ -383,79 +551,37 @@ export default function Home() {
                   <h3>Obtenez une consultation gratuite sur WhatsApp</h3>
                   <p>Parlez-nous de votre projet en quelques minutes. Audit express, recommandations concrètes, sans rendez-vous ni engagement — disponible 24/7.</p>
                 </div>
-              </article>
+              </motion.article>
               {/* Request */}
-              <article className="process-card">
+              <motion.article className="process-card" variants={fadeUp} whileHover={{ y: -3 }}>
                 <div className="process-card-head">
                   <div className="request-head">
                     <div className="badge-row row-1">
                       <div className="badge-row-track">
-                        {[
-                          "Création de Sites Shopify",
-                          "Création d’Images Produits",
-                          "Création de Visuels et Vidéos performante",
-                          "Création de Sites Shopify",
-                          "Création d’Images Produits",
-                          "Création de Visuels et Vidéos performante",
-                        ].map((b, i) => (
+                        {["Création de Sites Shopify","Création d’Images Produits","Création de Visuels et Vidéos performante","Création de Sites Shopify","Création d’Images Produits","Création de Visuels et Vidéos performante",].map((b, i) => (
                           <span key={i} className="badge-chip">{b}</span>
                         ))}
-                        {[
-                          "Création de Sites Shopify",
-                          "Création d’Images Produits",
-                          "Création de Visuels et Vidéos performante",
-                          "Création de Sites Shopify",
-                          "Création d’Images Produits",
-                          "Création de Visuels et Vidéos performante",
-                        ].map((b, i) => (
+                        {["Création de Sites Shopify","Création d’Images Produits","Création de Visuels et Vidéos performante","Création de Sites Shopify","Création d’Images Produits","Création de Visuels et Vidéos performante",].map((b, i) => (
                           <span key={`dup-${i}`} className="badge-chip">{b}</span>
                         ))}
                       </div>
                     </div>
                     <div className="badge-row row-2">
                       <div className="badge-row-track reversed">
-                        {[
-                          "Création d’Images Produits",
-                          "Création de Sites Shopify",
-                          "Création de Visuels et Vidéos performante",
-                          "Création d’Images Produits",
-                          "Création de Visuels et Vidéos performante",
-                          "Création de Sites Shopify",
-                        ].map((b, i) => (
+                        {["Création d’Images Produits","Création de Sites Shopify","Création de Visuels et Vidéos performante","Création d’Images Produits","Création de Visuels et Vidéos performante","Création de Sites Shopify",].map((b, i) => (
                           <span key={`r2-${i}`} className="badge-chip">{b}</span>
                         ))}
-                        {[
-                          "Création d’Images Produits",
-                          "Création de Sites Shopify",
-                          "Création de Visuels et Vidéos performante",
-                          "Création d’Images Produits",
-                          "Création de Visuels et Vidéos performante",
-                          "Création de Sites Shopify",
-                        ].map((b, i) => (
+                        {["Création d’Images Produits","Création de Sites Shopify","Création de Visuels et Vidéos performante","Création d’Images Produits","Création de Visuels et Vidéos performante","Création de Sites Shopify",].map((b, i) => (
                           <span key={`r2-dup-${i}`} className="badge-chip">{b}</span>
                         ))}
                       </div>
                     </div>
                     <div className="badge-row row-3">
                       <div className="badge-row-track">
-                        {[
-                          "Création de Visuels et Vidéos performante",
-                          "Création d’Images Produits",
-                          "Création de Sites Shopify",
-                          "Création de Visuels et Vidéos performante",
-                          "Création de Sites Shopify",
-                          "Création d’Images Produits",
-                        ].map((b, i) => (
+                        {["Création de Visuels et Vidéos performante","Création d’Images Produits","Création de Sites Shopify","Création de Visuels et Vidéos performante","Création de Sites Shopify","Création d’Images Produits",].map((b, i) => (
                           <span key={`r3-${i}`} className="badge-chip">{b}</span>
                         ))}
-                        {[
-                          "Création de Visuels et Vidéos performante",
-                          "Création d’Images Produits",
-                          "Création de Sites Shopify",
-                          "Création de Visuels et Vidéos performante",
-                          "Création de Sites Shopify",
-                          "Création d’Images Produits",
-                        ].map((b, i) => (
+                        {["Création de Visuels et Vidéos performante","Création d’Images Produits","Création de Sites Shopify","Création de Visuels et Vidéos performante","Création de Sites Shopify","Création d’Images Produits",].map((b, i) => (
                           <span key={`r3-dup-${i}`} className="badge-chip">{b}</span>
                         ))}
                       </div>
@@ -469,34 +595,33 @@ export default function Home() {
                   <h3>Accompagnement</h3>
                   <p>Nous vous accompagnons de bout en bout dans la création et la croissance de votre e‑commerce&nbsp;: site Shopify soigné, visuels produits qui attirent l’attention et campagnes publicitaires tournées vers la conversion. Notre objectif&nbsp;: des résultats concrets et durables.</p>
                 </div>
-              </article>
+              </motion.article>
               {/* Receive - folder with shots */}
-              <article className="process-card receive-card">
+              <motion.article className="process-card receive-card" variants={fadeUp} whileHover={{ y: -3 }}>
                 <div className="process-card-head">
                   <div className="folder">
                     <div className="back"><img className="back-img" src="https://framerusercontent.com/images/u6NHrizsQWk4u5sqIM2DGhO2EI.svg" alt="Folder back" /></div>
-                    <div className="shots">
-                      <span className="shot shot-1"><img src="/assets/img/ECOM.png" alt="Project shot 1" /></span>
-                      <span className="shot shot-2"><img src="/assets/img/ECOM B.png" alt="Project shot 2" /></span>
-                      <span className="shot shot-3"><img src="/assets/img/Ecom v .png" alt="Project shot 3" /></span>
-                    </div>
-                    <div className="front"></div>
+                    <div className="front"><img className="front-img" src="https://framerusercontent.com/images/DBQFZbvllIRiYvctCJ768HVNBw.svg" alt="Folder front" /></div>
+                    <div className="shot s1"><img src="https://framerusercontent.com/images/DZ571NqB61IxPsGk6kodp4tHmtM.svg" alt="Shot 1" /></div>
+                    <div className="shot s2"><img src="https://framerusercontent.com/images/0l8sGd6Gq1lE4VFZevjLMMkEQU.svg" alt="Shot 2" /></div>
+                    <div className="shot s3"><img src="https://framerusercontent.com/images/2MaK2mVgQMTILlF4WSn5CiU2YI.svg" alt="Shot 3" /></div>
+                    <div className="shot s4"><img src="https://framerusercontent.com/images/lIeOGtYAcsdA0VyK1CoC6WQnCk.svg" alt="Shot 4" /></div>
                   </div>
                 </div>
                 <div className="process-card-body">
-                  <h3>Résultats</h3>
-                  <p>Votre marque e‑commerce passe un cap : conversion qui grimpe, panier moyen qui progresse, ROAS maîtrisé, acquisition plus rentable et rétention renforcée. Testez vite, apprenez, et scalez sereinement — une identité de marque cohérente et des performances qui parlent d’elles‑mêmes.</p>
+                  <h3>Livrables</h3>
+                  <p>Recevez des livrables propres et prêts à l’emploi. Nous fournissons les fichiers sources pour une pleine propriété et une évolutivité totale.</p>
                 </div>
-              </article>
+              </motion.article>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Témoignages – Slider au pixel près */}
-        <section className="testimonials-section">
+        <motion.section className="testimonials-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <div className="testimonials-wrap">
             <span className="testimonials-pill">Témoignages</span>
-            <h2 className="process-title">Ils aiment quand c'est<em> bien fait.</em></h2>
+            <h2 className="process-title">Ils aiment quand c&apos;est<em> bien fait.</em></h2>
             <div className="testimonials-carousel">
               <div className="testimonials-track" ref={trackRef}>
               {/* cartes visibles (3 colonnes) */}
@@ -555,7 +680,7 @@ export default function Home() {
               <span className={`dot ${activeSlide === 3 ? 'active dot-pop' : ''}`} role="tab" aria-selected={activeSlide===3} aria-controls="slide-3" onClick={() => scrollToSlide(3)}></span>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* FAQ Section */}
         <section className="faq-section" aria-labelledby="faq-title">

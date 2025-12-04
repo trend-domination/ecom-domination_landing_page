@@ -1,92 +1,1372 @@
-[00:00:06.705] Server  LOG      ✓ Ready in 5.1s
-[00:01:36.960] Server  LOG      ○ Compiling / ...
-[00:01:42.847] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:30.273] Server  LOG      ✓ Compiled in 1936ms
-[00:10:10.360] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:13.864] Server  LOG      ✓ Compiled in 1339ms
-[00:17:12.514] Server  LOG      ✓ Compiled in 1557ms
-[00:17:39.481] Server  LOG      ✓ Compiled in 1626ms
-[00:17:51.354] Server  WARN     ⚠ Cross origin request detected from 192.168.1.86 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:17:51.510] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:03.104] Server  LOG      ✓ Ready in 2.2s
+[00:00:12.765] Server  LOG      ○ Compiling / ...
+[00:00:19.090] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:19.782] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:43.073] Server  LOG      ✓ Compiled in 1344ms
+[04:00:55.983] Server  LOG      ✓ Compiled in 1560ms
+[04:01:05.804] Server  LOG      ✓ Compiled in 648ms
+[00:07:53.460] Server  LOG      ✓ Compiled in 707ms
+[00:09:06.732] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:07.359] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:19:00.477] Server  LOG      ✓ Compiled in 1241ms
+[04:12:13.141] Server  LOG      ✓ Compiled in 1334ms
+[04:13:01.384] Server  LOG      ✓ Compiled in 685ms
+[00:19:49.135] Server  LOG      ✓ Compiled in 865ms
+[04:13:48.563] Server  LOG      ✓ Compiled in 532ms
+[00:20:36.165] Server  LOG      ✓ Compiled in 576ms
+[00:20:54.796] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:55.383] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:17:01.460] Server  LOG      ✓ Compiled in 654ms
+[00:23:49.054] Server  LOG      ✓ Compiled in 739ms
+[00:24:03.520] Server  LOG      ✓ Compiled in 365ms
+[04:17:16.058] Server  LOG      ✓ Compiled in 496ms
+[00:24:12.280] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:12.911] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:22:27.347] Server  LOG      ✓ Compiled in 545ms
+[00:29:14.955] Server  LOG      ✓ Compiled in 563ms
+[00:30:02.915] Server  LOG      ✓ Compiled in 1290ms
+[00:30:03.347] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:55:6
+Parsing ecmascript source code failed
+  53 |   const scrollToSlide = (i: number) => {
+  54 |     const g = getCarouselGeometry(); if (!g) return;
+> 55 | -    const { el, pageStep } = g;
+     |      ^^^^^
+  56 | +    const { el, dotStep } = g;
+  57 |     const maxI = getMaxIndex();
+  58 |     const target = Math.max(0, Math.min(maxI, i));
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+Expression expected
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
 
-%s%s https://react.dev/link/hydration-mismatch 
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[00:30:03.490] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:55:6
+Parsing ecmascript source code failed
+  53 |   const scrollToSlide = (i: number) => {
+  54 |     const g = getCarouselGeometry(); if (!g) return;
+> 55 | -    const { el, pageStep } = g;
+     |      ^^^^^
+  56 | +    const { el, dotStep } = g;
+  57 |     const maxI = getMaxIndex();
+  58 |     const target = Math.max(0, Math.min(maxI, i));
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="/Projets D...">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
--                         __gchrome_remoteframetoken="9db5ec5c6f6a89befe22edee0a2f9e2a"
-                        >
-                  ...
+Expression expected
 
-[00:18:13.270] Server  LOG      ✓ Compiled in 1314ms
-[00:19:51.682] Server  LOG      ✓ Compiled in 2.3s
-[00:25:34.087] Server  LOG      ✓ Compiled in 1356ms
-[00:25:47.273] Server  LOG      ✓ Compiled in 1958ms
-[00:27:27.152] Server  LOG      ✓ Compiled in 1432ms
-[00:38:44.721] Server  LOG      ✓ Compiled in 1262ms
-[00:39:00.131] Server  LOG      ✓ Compiled in 1375ms
-[00:39:10.826] Server  LOG      ✓ Compiled in 790ms
-[00:56:44.337] Server  LOG      ✓ Compiled in 1657ms
-[00:56:56.988] Server  LOG      ✓ Compiled in 989ms
-[00:57:13.911] Server  LOG      ✓ Compiled in 1086ms
-[00:57:23.584] Server  LOG      ✓ Compiled in 1416ms
-[00:57:33.086] Server  LOG      ✓ Compiled in 578ms
-[00:57:44.153] Server  LOG      ✓ Compiled in 604ms
-[00:57:53.800] Server  LOG      ✓ Compiled in 639ms
-[00:58:10.069] Server  LOG      ✓ Compiled in 387ms
-[00:59:32.699] Server  LOG      ✓ Compiled in 1284ms
-[01:00:37.348] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:10:49.202] Server  LOG      ✓ Compiled in 1559ms
-[01:15:20.831] Server  LOG      ✓ Compiled in 283ms
-[01:16:15.588] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:29:04.602] Server  LOG      ✓ Compiled in 1507ms
-[01:29:24.318] Server  LOG      ✓ Compiled in 304ms
-[01:30:14.443] Server  LOG      ✓ Compiled in 325ms
-[01:30:17.420] Server  LOG      ✓ Compiled in 423ms
-[01:30:35.005] Server  LOG      ✓ Compiled in 680ms
-[01:33:15.203] Server  LOG      ✓ Compiled in 946ms
-[01:33:19.572] Server  LOG      ✓ Compiled in 578ms
-[01:33:21.330] Server  LOG      ✓ Compiled in 620ms
-[01:33:24.582] Server  LOG      ✓ Compiled in 326ms
-[01:33:28.378] Server  LOG      ✓ Compiled in 559ms
-[01:33:30.320] Server  LOG      ✓ Compiled in 230ms
-[01:33:33.226] Server  LOG      ✓ Compiled in 539ms
-[01:33:36.811] Server  LOG      ✓ Compiled in 375ms
-[01:33:41.538] Server  LOG      ✓ Compiled in 575ms
-[01:33:43.211] Server  LOG      ✓ Compiled in 517ms
-[01:33:49.676] Server  LOG      ✓ Compiled in 368ms
-[01:33:51.448] Server  LOG      ✓ Compiled in 248ms
-[01:34:34.495] Server  LOG      ✓ Compiled in 991ms
-[01:34:39.242] Server  LOG      ✓ Compiled in 763ms
-[01:34:41.514] Server  LOG      ✓ Compiled in 333ms
-[01:34:43.500] Server  LOG      ✓ Compiled in 255ms
-[01:34:48.364] Server  LOG      ✓ Compiled in 431ms
-[01:34:52.013] Server  LOG      ✓ Compiled in 383ms
-[01:34:56.723] Server  LOG      ✓ Compiled in 367ms
-[01:35:17.547] Server  LOG      ✓ Compiled in 411ms
-[01:39:21.097] Server  LOG      ✓ Compiled in 342ms
-[01:48:29.997] Server  LOG      ✓ Compiled in 565ms
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[00:30:03.490] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:55:6
+Parsing ecmascript source code failed
+  53 |   const scrollToSlide = (i: number) => {
+  54 |     const g = getCarouselGeometry(); if (!g) return;
+> 55 | -    const { el, pageStep } = g;
+     |      ^^^^^
+  56 | +    const { el, dotStep } = g;
+  57 |     const maxI = getMaxIndex();
+  58 |     const target = Math.max(0, Math.min(maxI, i));
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:23:16.053] Server  LOG      ✓ Compiled in 1470ms
+[04:23:20.364] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:55:6
+Parsing ecmascript source code failed
+  53 |   const scrollToSlide = (i: number) => {
+  54 |     const g = getCarouselGeometry(); if (!g) return;
+> 55 | -    const { el, pageStep } = g;
+     |      ^^^^^
+  56 | +    const { el, dotStep } = g;
+  57 |     const maxI = getMaxIndex();
+  58 |     const target = Math.max(0, Math.min(maxI, i));
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:23:20.364] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:55:6
+Parsing ecmascript source code failed
+  53 |   const scrollToSlide = (i: number) => {
+  54 |     const g = getCarouselGeometry(); if (!g) return;
+> 55 | -    const { el, pageStep } = g;
+     |      ^^^^^
+  56 | +    const { el, dotStep } = g;
+  57 |     const maxI = getMaxIndex();
+  58 |     const target = Math.max(0, Math.min(maxI, i));
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:23:20.364] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:55:6
+Parsing ecmascript source code failed
+  53 |   const scrollToSlide = (i: number) => {
+  54 |     const g = getCarouselGeometry(); if (!g) return;
+> 55 | -    const { el, pageStep } = g;
+     |      ^^^^^
+  56 | +    const { el, dotStep } = g;
+  57 |     const maxI = getMaxIndex();
+  58 |     const target = Math.max(0, Math.min(maxI, i));
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[00:31:20.663] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:79:8
+Parsing ecmascript source code failed
+  77 |     const onScroll = () => {
+  78 |       const g = getCarouselGeometry(); if (!g) return;
+> 79 | -      const { pageStep } = g;
+     |        ^^^^^
+  80 | -      const i = Math.round(el.scrollLeft / pageStep);
+  81 | +      const { dotStep } = g;
+  82 | +      const i = dotStep > 0 ? Math.round(el.scrollLeft / dotStep) : 0;
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:24:35.327] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:79:8
+Parsing ecmascript source code failed
+  77 |     const onScroll = () => {
+  78 |       const g = getCarouselGeometry(); if (!g) return;
+> 79 | -      const { pageStep } = g;
+     |        ^^^^^
+  80 | -      const i = Math.round(el.scrollLeft / pageStep);
+  81 | +      const { dotStep } = g;
+  82 | +      const i = dotStep > 0 ? Math.round(el.scrollLeft / dotStep) : 0;
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:24:35.328] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:79:8
+Parsing ecmascript source code failed
+  77 |     const onScroll = () => {
+  78 |       const g = getCarouselGeometry(); if (!g) return;
+> 79 | -      const { pageStep } = g;
+     |        ^^^^^
+  80 | -      const i = Math.round(el.scrollLeft / pageStep);
+  81 | +      const { dotStep } = g;
+  82 | +      const i = dotStep > 0 ? Math.round(el.scrollLeft / dotStep) : 0;
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[00:31:42.808] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:93:8
+Parsing ecmascript source code failed
+  91 |     const onScroll = () => {
+  92 |       const g = getCarouselGeometry(); if (!g) return;
+> 93 | -      const { pageStep } = g;
+     |        ^^^^^
+  94 | -      const i = Math.round(el.scrollLeft / pageStep);
+  95 | +      const { dotStep } = g;
+  96 | +      const i = dotStep > 0 ? Math.round(el.scrollLeft / dotStep) : 0;
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[00:31:43.196] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:93:8
+Parsing ecmascript source code failed
+  91 |     const onScroll = () => {
+  92 |       const g = getCarouselGeometry(); if (!g) return;
+> 93 | -      const { pageStep } = g;
+     |        ^^^^^
+  94 | -      const i = Math.round(el.scrollLeft / pageStep);
+  95 | +      const { dotStep } = g;
+  96 | +      const i = dotStep > 0 ? Math.round(el.scrollLeft / dotStep) : 0;
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:24:56.632] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:93:8
+Parsing ecmascript source code failed
+  91 |     const onScroll = () => {
+  92 |       const g = getCarouselGeometry(); if (!g) return;
+> 93 | -      const { pageStep } = g;
+     |        ^^^^^
+  94 | -      const i = Math.round(el.scrollLeft / pageStep);
+  95 | +      const { dotStep } = g;
+  96 | +      const i = dotStep > 0 ? Math.round(el.scrollLeft / dotStep) : 0;
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:24:56.632] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:93:8
+Parsing ecmascript source code failed
+  91 |     const onScroll = () => {
+  92 |       const g = getCarouselGeometry(); if (!g) return;
+> 93 | -      const { pageStep } = g;
+     |        ^^^^^
+  94 | -      const i = Math.round(el.scrollLeft / pageStep);
+  95 | +      const { dotStep } = g;
+  96 | +      const i = dotStep > 0 ? Math.round(el.scrollLeft / dotStep) : 0;
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[04:25:17.127] Server  LOG      ✓ Compiled in 682ms
+[00:32:04.833] Server  LOG      ✓ Compiled in 794ms
+[00:33:16.001] Server  LOG      ✓ Compiled in 484ms
+[04:26:28.498] Server  LOG      ✓ Compiled in 550ms
+[04:27:12.972] Server  LOG      ✓ Compiled in 494ms
+[00:34:00.628] Server  LOG      ✓ Compiled in 554ms
+[00:34:18.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:19.467] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[04:30:38.042] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:38:46.736] Server  LOG      ✓ Compiled in 747ms
+[04:31:59.233] Server  LOG      ✓ Compiled in 810ms
+[04:32:29.935] Server  LOG      ✓ Compiled in 360ms
+[00:39:17.530] Server  LOG      ✓ Compiled in 363ms
+[00:39:49.181] Server  LOG      ✓ Compiled in 244ms
+[04:33:01.861] Server  LOG      ✓ Compiled in 518ms
+[04:33:21.969] Server  LOG      ✓ Compiled in 317ms
+[00:40:09.572] Server  LOG      ✓ Compiled in 337ms
+[04:33:51.204] Server  LOG      ✓ Compiled in 384ms
+[00:40:38.827] Server  LOG      ✓ Compiled in 412ms
+[00:40:48.432] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:26.711] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:41:50.065] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:48:08.559] Server  LOG      ✓ Compiled in 1119ms
+[00:48:38.173] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:38.973] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:53:33.278] Server  LOG      ✓ Compiled in 1611ms
+[00:53:33.554] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
+
+Previous: %s
+Incoming: %s useEffect [] [1]
+[00:53:33.813] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
+
+Previous: %s
+Incoming: %s useEffect [] [1]
+[00:53:42.191] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:16.587] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:04:11.521] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:04:11.753] Server  LOG      ✓ Compiled in 6ms
+[01:04:11.852] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:04:13.599] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:04:13.599] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:04:57.752] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:04:57.752] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:04:58.495] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:04:58.495] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:05.382] Server  ERROR    ⨯ ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+
+[01:05:05.588] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:05.750] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:08.408] Server  LOG      ○ Compiling /_error ...
+[01:05:08.750] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:08.750] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:09.908] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:09.908] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:10.518] Browser ERROR   uncaughtError: Error: ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+
+[01:05:10.641] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:10.824] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:11.750] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:05:12.037] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:02.687] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:02.909] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:03.688] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:03.688] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:10.582] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:10.862] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:11.773] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:11.773] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:32.596] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:11:32.871] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:317:1
+Parsing ecmascript source code failed
+  315 | +              {menuOpen && (
+  316 | +                <motion.div
+> 317 | +                  ref={menuRef}
+      | ^
+  318 | +                  id="topmenu"
+  319 | +                  className="menu-overlay"
+  320 | +                  role="dialog"
+
+Unexpected token `+`. Expected jsx identifier
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[05:04:46.372] Server  LOG      ✓ Compiled in 1258ms
+[01:11:34.245] Server  LOG      ✓ Compiled in 1419ms
+[01:11:34.266] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:11:38.610] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:39.286] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:11:41.573] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:41.990] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:12:12.916] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:12:33.873] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:15:15.508] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:15:16.474] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:17:07.361] Server  LOG      ✓ Compiled in 1009ms
+[01:17:18.826] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:17:32.487] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:20:31.023] Server  LOG      ✓ Compiled in 843ms
+[01:20:40.475] Server  LOG      ✓ Compiled in 771ms
+[01:20:50.395] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:21:41.691] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:22:15.626] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:22:16.298] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:29:52.135] Browser ERROR   unhandledRejection: Error: 请求超时: /api/webviewClick
+[01:30:00.286] Browser ERROR   unhandledRejection: Error: 请求超时: /api/webviewClick
+[01:36:30.761] Server  LOG      ✓ Compiled in 1392ms
+[01:36:30.971] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:609:26
+Parsing ecmascript source code failed
+  607 |             </div>
+  608 |           </div>
+> 609 |         </motion.section>
+      |                          ^
+> 610 |
+      | ^
+> 611 |         {/* Témoignages – Slider au pixel près */}
+      | ^^^^^^^^^
+  612 |         <section className="testimonials-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+  613 |           <div className="testimonials-wrap">
+  614 |             <span className="testimonials-pill">Témoignages</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:31.296] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:609:26
+Parsing ecmascript source code failed
+  607 |             </div>
+  608 |           </div>
+> 609 |         </motion.section>
+      |                          ^
+> 610 |
+      | ^
+> 611 |         {/* Témoignages – Slider au pixel près */}
+      | ^^^^^^^^^
+  612 |         <section className="testimonials-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+  613 |           <div className="testimonials-wrap">
+  614 |             <span className="testimonials-pill">Témoignages</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:32.203] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:609:26
+Parsing ecmascript source code failed
+  607 |             </div>
+  608 |           </div>
+> 609 |         </motion.section>
+      |                          ^
+> 610 |
+      | ^
+> 611 |         {/* Témoignages – Slider au pixel près */}
+      | ^^^^^^^^^
+  612 |         <section className="testimonials-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+  613 |           <div className="testimonials-wrap">
+  614 |             <span className="testimonials-pill">Témoignages</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:32.326] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:609:26
+Parsing ecmascript source code failed
+  607 |             </div>
+  608 |           </div>
+> 609 |         </motion.section>
+      |                          ^
+> 610 |
+      | ^
+> 611 |         {/* Témoignages – Slider au pixel près */}
+      | ^^^^^^^^^
+  612 |         <section className="testimonials-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+  613 |           <div className="testimonials-wrap">
+  614 |             <span className="testimonials-pill">Témoignages</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:58.222] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:674:19
+Parsing ecmascript source code failed
+  672 |             </div>
+  673 |           </div>
+> 674 |         </section>
+      |                   ^
+> 675 |
+      | ^
+> 676 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  677 |         <section className="faq-section" aria-labelledby="faq-title">
+  678 |           <div className="faq-card">
+  679 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:59.141] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:674:19
+Parsing ecmascript source code failed
+  672 |             </div>
+  673 |           </div>
+> 674 |         </section>
+      |                   ^
+> 675 |
+      | ^
+> 676 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  677 |         <section className="faq-section" aria-labelledby="faq-title">
+  678 |           <div className="faq-card">
+  679 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:59.236] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:674:19
+Parsing ecmascript source code failed
+  672 |             </div>
+  673 |           </div>
+> 674 |         </section>
+      |                   ^
+> 675 |
+      | ^
+> 676 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  677 |         <section className="faq-section" aria-labelledby="faq-title">
+  678 |           <div className="faq-card">
+  679 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:59.591] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:674:19
+Parsing ecmascript source code failed
+  672 |             </div>
+  673 |           </div>
+> 674 |         </section>
+      |                   ^
+> 675 |
+      | ^
+> 676 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  677 |         <section className="faq-section" aria-labelledby="faq-title">
+  678 |           <div className="faq-card">
+  679 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:59.591] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:674:19
+Parsing ecmascript source code failed
+  672 |             </div>
+  673 |           </div>
+> 674 |         </section>
+      |                   ^
+> 675 |
+      | ^
+> 676 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  677 |         <section className="faq-section" aria-labelledby="faq-title">
+  678 |           <div className="faq-card">
+  679 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:36:59.591] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:674:19
+Parsing ecmascript source code failed
+  672 |             </div>
+  673 |           </div>
+> 674 |         </section>
+      |                   ^
+> 675 |
+      | ^
+> 676 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  677 |         <section className="faq-section" aria-labelledby="faq-title">
+  678 |           <div className="faq-card">
+  679 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:38:40.782] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:683:19
+Parsing ecmascript source code failed
+  681 |             </div>
+  682 |           </div>
+> 683 |         </section>
+      |                   ^
+> 684 |
+      | ^
+> 685 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  686 |         <section className="faq-section" aria-labelledby="faq-title">
+  687 |           <div className="faq-card">
+  688 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:38:41.018] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:683:19
+Parsing ecmascript source code failed
+  681 |             </div>
+  682 |           </div>
+> 683 |         </section>
+      |                   ^
+> 684 |
+      | ^
+> 685 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  686 |         <section className="faq-section" aria-labelledby="faq-title">
+  687 |           <div className="faq-card">
+  688 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:38:41.349] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:683:19
+Parsing ecmascript source code failed
+  681 |             </div>
+  682 |           </div>
+> 683 |         </section>
+      |                   ^
+> 684 |
+      | ^
+> 685 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  686 |         <section className="faq-section" aria-labelledby="faq-title">
+  687 |           <div className="faq-card">
+  688 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:38:41.349] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:683:19
+Parsing ecmascript source code failed
+  681 |             </div>
+  682 |           </div>
+> 683 |         </section>
+      |                   ^
+> 684 |
+      | ^
+> 685 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  686 |         <section className="faq-section" aria-labelledby="faq-title">
+  687 |           <div className="faq-card">
+  688 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:38:42.260] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:683:19
+Parsing ecmascript source code failed
+  681 |             </div>
+  682 |           </div>
+> 683 |         </section>
+      |                   ^
+> 684 |
+      | ^
+> 685 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  686 |         <section className="faq-section" aria-labelledby="faq-title">
+  687 |           <div className="faq-card">
+  688 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[01:38:42.261] Browser ERROR   ./Projets DEV/ecom-domination/src/app/page.tsx:683:19
+Parsing ecmascript source code failed
+  681 |             </div>
+  682 |           </div>
+> 683 |         </section>
+      |                   ^
+> 684 |
+      | ^
+> 685 |         {/* FAQ Section */}
+      | ^^^^^^^^^
+  686 |         <section className="faq-section" aria-labelledby="faq-title">
+  687 |           <div className="faq-card">
+  688 |             <span className="faq-badge">FAQ</span>
+
+Expected '</', got 'jsx text (
+
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component Browser]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Client Component SSR]
+    ./Projets DEV/ecom-domination/src/app/page.tsx [Server Component]
+[05:32:45.196] Server  LOG      ✓ Compiled in 4.3s
+[01:39:33.485] Server  LOG      ✓ Compiled in 4.4s
+[01:43:16.969] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
