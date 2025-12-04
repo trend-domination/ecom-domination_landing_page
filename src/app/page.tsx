@@ -376,7 +376,7 @@ export default function Home() {
                     <div className="price-line">
                       <span className="price-value">Assistance 24/7</span>
                     </div>
-                    <a className="process-btn" href="#">Discutons de votre projet</a>
+                    <a className="process-btn" href="https://wa.me/message/URL4FFGHMAQLD1" target="_blank" rel="noopener noreferrer">Discutons de votre projet</a>
                   </div>
                 </div>
                 <div className="process-card-body">
@@ -496,21 +496,20 @@ export default function Home() {
         <section className="testimonials-section">
           <div className="testimonials-wrap">
             <span className="testimonials-pill">Témoignages</span>
-             <h2 className="process-title">Il s’avère que nos clients aiment quand c’est <em>fait.</em></h2>
- 
-             <div className="testimonials-carousel">
-                <div className="testimonials-track" ref={trackRef}>
-                {/* cartes visibles (3 colonnes) */}
-                {[0,1,2,3].map((idx) => (
-                  <article key={`card-${idx}`} className={`testimonial-card ${idx===3?'ghost':''}`}>
-                    <div className="t-head">
-                      <img className="t-avatar" src="https://i.pravatar.cc/96?img=21" alt="Client" />
-                      <div className="t-meta">
-                        <strong className="t-name">Tina Zhang</strong>
-                        <span className="t-role">Directrice créative, Octave</span>
-                      </div>
+            <h2 className="process-title">Ils aiment quand c'est<em> bien fait.</em></h2>
+            <div className="testimonials-carousel">
+              <div className="testimonials-track" ref={trackRef}>
+              {/* cartes visibles (3 colonnes) */}
+              {[0,1,2,3].map((idx) => (
+                <article key={`card-${idx}`} className={`testimonial-card ${idx===3?'ghost':''}`}>
+                  <div className="t-head">
+                    <img className="t-avatar" src="https://i.pravatar.cc/96?img=21" alt="Client" />
+                    <div className="t-meta">
+                      <strong className="t-name">Tina Zhang</strong>
+                      <span className="t-role">Responsable e‑commerce, Octave</span>
                     </div>
-                    <p className="t-quote">La qualité du design est top‑tier et le processus est sans accroc. On a l’impression de tricher tant c’est efficace.</p>
+                    </div>
+                    <p className="t-quote">Site Shopify livré sans friction, visuels produits qui convertissent et une équipe qui anticipe. Impact visible dès la première campagne.</p>
                   </article>
                 ))}
                 {[0,1,2,3].map((idx) => (
@@ -522,7 +521,7 @@ export default function Home() {
                         <span className="t-role">Fondateur, Nimbus Systems</span>
                       </div>
                     </div>
-                    <p className="t-quote">Pas de réunions inutiles, pas de délais, pas de drama. Du design malin livré quand il faut. Je recommande sans réserve.</p>
+                    <p className="t-quote">Ils ont structuré nos pages, nos images et nos vidéos ads. Moins de bricolage, plus de ventes. Communication directe sur WhatsApp: efficace.</p>
                   </article>
                 ))}
                 <article className="testimonial-card">
@@ -533,7 +532,7 @@ export default function Home() {
                       <span className="t-role">Marketing Lead, RelayOne</span>
                     </div>
                   </div>
-                  <p className="t-quote">J’ai adoré travailler avec Whenever. Inutile d’expliquer deux fois. Le design est arrivé exactement comme je l’avais imaginé.</p>
+                  <p className="t-quote">Landing pages et kits visuels prêts à l’emploi. Lancement plus rapide et un lift de conversion mesurable en quelques jours.</p>
                 </article>
 
                 <article className="testimonial-card ghost">
@@ -561,74 +560,71 @@ export default function Home() {
         {/* FAQ Section */}
         <section className="faq-section" aria-labelledby="faq-title">
           <div className="faq-card">
-            <span className="faq-badge">FAQs</span>
+            <span className="faq-badge">FAQ</span>
             <div className="faq-title">
-              <span id="faq-title" className="faq-title-line">Frequently</span>
-              <span className="faq-title-line"><em>Asked</em> Questions</span>
+              <span id="faq-title" className="faq-title-line">Ce que se demandent souvent nos clients</span>
             </div>
-
             <div className="faq-contact">
               <div className="faq-email">
                 <span className="faq-email-label">Email</span>
                 <span className="faq-email-value">contact@ecomdomination.com</span>
               </div>
-              <a href="#contact" className="faq-cta" aria-label="Commencez votre consultation">Commencez votre consultation</a>
+              <a href="https://wa.me/message/URL4FFGHMAQLD1" className="faq-cta" aria-label="Commencez votre consultation">Commencez votre consultation</a>
             </div>
-
             <div className="faq-list" role="list">
               <div className={`faq-item ${faqOpenIndex === 0 ? 'open' : ''}`} role="listitem">
-                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
-                  <div className="faq-item-text">How many design requests can I submit?</div>
+                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', paddingRight:'4rem', position:'relative' }}>
+                  <div className="faq-item-text">Combien de demandes puis-je soumettre ?</div>
                   <button className="faq-item-toggle" aria-label="Toggle answer" onClick={() => setFaqOpenIndex(faqOpenIndex === 0 ? null : 0)}>
                     <span className="plus-icon" style={{ transition: 'transform .22s ease', transform: faqOpenIndex === 0 ? 'rotate(45deg)' : 'none' }} />
                   </button>
                 </div>
-                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 0 ? 240 : 0, opacity: faqOpenIndex === 0 ? 1 : 0, overflow:'hidden', transition:'max-height .28s ease, opacity .28s ease' }}>
-                  <p className="faq-answer">You can submit as many requests as you’d like. They’ll be handled one at a time, in the order they’re added to your Notion board.</p>
+                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 0 ? 260 : 0, opacity: faqOpenIndex === 0 ? 1 : 0, overflow:'hidden', transition:'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s', paddingBottom: faqOpenIndex === 0 ? 6 : 0 }}>
+                  <p className="faq-answer">Autant que vous le souhaitez. Nous les traitons une par une afin de garantir la qualité et la régularité des livrables.</p>
                 </div>
               </div>
               <div className={`faq-item ${faqOpenIndex === 1 ? 'open' : ''}`} role="listitem">
-                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
-                  <div className="faq-item-text">What kind of design work is included?</div>
+                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', paddingRight:'4rem', position:'relative' }}>
+                  <div className="faq-item-text">Quel type de travail est inclus ?</div>
                   <button className="faq-item-toggle" aria-label="Toggle answer" onClick={() => setFaqOpenIndex(faqOpenIndex === 1 ? null : 1)}>
                     <span className="plus-icon" style={{ transition: 'transform .22s ease', transform: faqOpenIndex === 1 ? 'rotate(45deg)' : 'none' }} />
                   </button>
                 </div>
-                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 1 ? 240 : 0, opacity: faqOpenIndex === 1 ? 1 : 0, overflow:'hidden', transition:'max-height .28s ease, opacity .28s ease' }}>
-                  <p className="faq-answer">Design work typically includes UI/UX, web and app screens, branding assets, and marketing collateral depending on the plan.</p>
+                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 1 ? 260 : 0, opacity: faqOpenIndex === 1 ? 1 : 0, overflow:'hidden', transition:'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s', paddingBottom: faqOpenIndex === 1 ? 6 : 0 }}>
+                  <p className="faq-answer">Création de sites Shopify, images produits, visuels et vidéos publicitaires, landing pages et optimisation orientée conversion. Nous adaptons l’ampleur selon votre besoin.</p>
                 </div>
               </div>
               <div className={`faq-item ${faqOpenIndex === 2 ? 'open' : ''}`} role="listitem">
-                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
-                  <div className="faq-item-text">How fast will I receive my designs?</div>
+                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', paddingRight:'4rem', position:'relative' }}>
+                  <div className="faq-item-text">Quel est le délai de livraison ?</div>
                   <button className="faq-item-toggle" aria-label="Toggle answer" onClick={() => setFaqOpenIndex(faqOpenIndex === 2 ? null : 2)}>
                     <span className="plus-icon" style={{ transition: 'transform .22s ease', transform: faqOpenIndex === 2 ? 'rotate(45deg)' : 'none' }} />
                   </button>
                 </div>
-                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 2 ? 240 : 0, opacity: faqOpenIndex === 2 ? 1 : 0, overflow:'hidden', transition:'max-height .28s ease, opacity .28s ease' }}>
-                  <p className="faq-answer">Most requests are turned around within 24–48 hours. Complex tasks may take longer.</p>
+                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 2 ? 260 : 0, opacity: faqOpenIndex === 2 ? 1 : 0, overflow:'hidden', transition:'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s', paddingBottom: faqOpenIndex === 2 ? 6 : 0 }}>
+                  <p className="faq-answer">La plupart des demandes sont livrées en 24–48h. Les projets plus complexes peuvent demander davantage de temps — nous vous prévenons toujours à l’avance.</p>
                 </div>
               </div>
               <div className={`faq-item ${faqOpenIndex === 3 ? 'open' : ''}`} role="listitem">
-                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
-                  <div className="faq-item-text">Can I pause my subscription?</div>
+                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', paddingRight:'4rem', position:'relative' }}>
+                  <div className="faq-item-text">Puis-je mettre en pause ?</div>
                   <button className="faq-item-toggle" aria-label="Toggle answer" onClick={() => setFaqOpenIndex(faqOpenIndex === 3 ? null : 3)}>
                     <span className="plus-icon" style={{ transition: 'transform .22s ease', transform: faqOpenIndex === 3 ? 'rotate(45deg)' : 'none' }} />
                   </button>
                 </div>
-                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 3 ? 240 : 0, opacity: faqOpenIndex === 3 ? 1 : 0, overflow:'hidden', transition:'max-height .28s ease, opacity .28s ease' }}>
-                  <p className="faq-answer">Yes, you can pause your subscription at any time and resume when you need more design work.</p>
+                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 3 ? 260 : 0, opacity: faqOpenIndex === 3 ? 1 : 0, overflow:'hidden', transition:'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s', paddingBottom: faqOpenIndex === 3 ? 6 : 0 }}>
+                  <p className="faq-answer">Oui. Vous pouvez mettre en pause et reprendre quand vous voulez, sans complexité administrative.</p>
                 </div>
               </div>
               <div className={`faq-item ${faqOpenIndex === 4 ? 'open' : ''}`} role="listitem">
-                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
-                  <div className="faq-item-text">What if I need development too?</div>
+                <div className="faq-item-row" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', paddingRight:'4rem', position:'relative' }}>
+                  <div className="faq-item-text">Et si j’ai besoin de développement aussi ?</div>
                   <button className="faq-item-toggle" aria-label="Toggle answer" onClick={() => setFaqOpenIndex(faqOpenIndex === 4 ? null : 4)}>
                     <span className="plus-icon" style={{ transition: 'transform .22s ease', transform: faqOpenIndex === 4 ? 'rotate(45deg)' : 'none' }} />
                   </button>
                 </div>
-                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 4 ? 240 : 0, opacity: faqOpenIndex === 4 ? 1 : 0, overflow:'hidden', transition:'max-height .28s ease, opacity .28s ease' }}>
-                  <p className="faq-answer">We collaborate with development partners or can integrate with your dev team to ship high-quality products.</p>
+                <div className="faq-answer-wrap" style={{ maxHeight: faqOpenIndex === 4 ? 260 : 0, opacity: faqOpenIndex === 4 ? 1 : 0, overflow:'hidden', transition:'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s', paddingBottom: faqOpenIndex === 4 ? 6 : 0 }}>
+                  <p className="faq-answer">Oui. Nous collaborons avec vos développeurs ou nos partenaires pour intégrer et livrer des produits de qualité, de bout en bout.</p>
                 </div>
               </div>
             </div>

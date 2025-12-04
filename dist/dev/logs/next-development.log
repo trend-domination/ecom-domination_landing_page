@@ -1,36 +1,14 @@
-[00:00:04.324] Server  LOG      ✓ Ready in 3.4s
-[00:01:47.328] Server  LOG      ○ Compiling / ...
-[00:02:00.097] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:03.324] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:06.579] Server  LOG      ✓ Compiled in 1449ms
-[00:03:32.940] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:55.639] Server  WARN     ⚠ Cross origin request detected from 192.168.1.85 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:06.705] Server  LOG      ✓ Ready in 5.1s
+[00:01:36.960] Server  LOG      ○ Compiling / ...
+[00:01:42.847] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:30.273] Server  LOG      ✓ Compiled in 1936ms
+[00:10:10.360] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:10:13.864] Server  LOG      ✓ Compiled in 1339ms
+[00:17:12.514] Server  LOG      ✓ Compiled in 1557ms
+[00:17:39.481] Server  LOG      ✓ Compiled in 1626ms
+[00:17:51.354] Server  WARN     ⚠ Cross origin request detected from 192.168.1.86 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:04:42.286] Server  LOG      ✓ Compiled in 2.7s
-[00:04:56.744] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:10.274] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:20.628] Server  LOG      ✓ Compiled in 3.2s
-[00:10:30.682] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:32.994] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:46.929] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:16:10.065] Server  LOG      ✓ Compiled in 3.1s
-[00:16:37.963] Server  LOG      ✓ Compiled in 3.2s
-[00:16:52.629] Server  LOG      ✓ Compiled in 3.8s
-[00:17:01.778] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:04.108] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:17:30.064] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:17:44.044] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:23:56.479] Server  LOG      ✓ Compiled in 2.5s
-[00:24:10.394] Server  LOG      ✓ Compiled in 2.9s
-[00:24:34.900] Server  LOG      ✓ Compiled in 1612ms
-[00:24:45.985] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:25:30.790] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:26:44.588] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:26:51.335] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:27:15.098] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:27:56.947] Server  LOG      ✓ Compiled in 4.2s
-[00:29:46.601] Server  LOG      ✓ Compiled in 726ms
-[00:32:53.756] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:17:51.510] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -60,129 +38,54 @@ It can also happen if the client has a browser extension installed which messes 
                       <RootLayout>
                         <html
                           lang="fr"
--                         __gchrome_remoteframetoken="2ef44391f037a3301fe4b3667ed81162"
+-                         __gchrome_remoteframetoken="9db5ec5c6f6a89befe22edee0a2f9e2a"
                         >
                   ...
 
-[00:54:26.612] Server  LOG      ✓ Compiled in 1194ms
-[00:54:36.146] Server  LOG      ✓ Compiled in 689ms
-[00:54:55.860] Server  LOG      ✓ Compiled in 1630ms
-[01:00:02.783] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:03:25.946] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:12:00.854] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:19:40.629] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:19:44.263] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:20:50.519] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="/Projets D...">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
--                         __gchrome_remoteframetoken="7f3d4446f31470b34e690c445c54ad50"
-                        >
-                  ...
-
-[01:24:47.529] Server  LOG      ✓ Compiled in 2.4s
-[01:25:01.307] Server  LOG      ✓ Compiled in 952ms
-[01:25:20.931] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="/Projets D...">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html lang="fr">
-                          <body
-                            className="inter_7c06bfaf-module__fHH9ha__variable playfair_display_c24751d6-module__wX3y7..."
--                           cz-shortcut-listen="true"
--                           monica-id="ofpnmcalabcbjgholdjcjblkibolbppb"
--                           monica-version="8.0.0"
-                          >
-                  ...
-
-[01:25:22.614] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:25:28.385] Server  LOG      ✓ Compiled in 2.8s
-[01:25:56.234] Server  LOG      ✓ Compiled in 1172ms
-[01:27:02.864] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:27:21.256] Server  LOG      ✓ Compiled in 1259ms
-[01:33:26.494] Server  LOG      ✓ Compiled in 4.7s
-[01:33:58.196] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="/Projets D...">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
--                         __gchrome_remoteframetoken="6115f4e43a20efb88aba250881612c2a"
-                        >
-                  ...
-
-[01:34:00.548] Server  LOG      ✓ Compiled in 1716ms
+[00:18:13.270] Server  LOG      ✓ Compiled in 1314ms
+[00:19:51.682] Server  LOG      ✓ Compiled in 2.3s
+[00:25:34.087] Server  LOG      ✓ Compiled in 1356ms
+[00:25:47.273] Server  LOG      ✓ Compiled in 1958ms
+[00:27:27.152] Server  LOG      ✓ Compiled in 1432ms
+[00:38:44.721] Server  LOG      ✓ Compiled in 1262ms
+[00:39:00.131] Server  LOG      ✓ Compiled in 1375ms
+[00:39:10.826] Server  LOG      ✓ Compiled in 790ms
+[00:56:44.337] Server  LOG      ✓ Compiled in 1657ms
+[00:56:56.988] Server  LOG      ✓ Compiled in 989ms
+[00:57:13.911] Server  LOG      ✓ Compiled in 1086ms
+[00:57:23.584] Server  LOG      ✓ Compiled in 1416ms
+[00:57:33.086] Server  LOG      ✓ Compiled in 578ms
+[00:57:44.153] Server  LOG      ✓ Compiled in 604ms
+[00:57:53.800] Server  LOG      ✓ Compiled in 639ms
+[00:58:10.069] Server  LOG      ✓ Compiled in 387ms
+[00:59:32.699] Server  LOG      ✓ Compiled in 1284ms
+[01:00:37.348] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:10:49.202] Server  LOG      ✓ Compiled in 1559ms
+[01:15:20.831] Server  LOG      ✓ Compiled in 283ms
+[01:16:15.588] Browser WARN    Image with src "https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png" has "fill" prop and "sizes" prop of "100vw", but image is not rendered at full viewport width. Please adjust "sizes" to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:29:04.602] Server  LOG      ✓ Compiled in 1507ms
+[01:29:24.318] Server  LOG      ✓ Compiled in 304ms
+[01:30:14.443] Server  LOG      ✓ Compiled in 325ms
+[01:30:17.420] Server  LOG      ✓ Compiled in 423ms
+[01:30:35.005] Server  LOG      ✓ Compiled in 680ms
+[01:33:15.203] Server  LOG      ✓ Compiled in 946ms
+[01:33:19.572] Server  LOG      ✓ Compiled in 578ms
+[01:33:21.330] Server  LOG      ✓ Compiled in 620ms
+[01:33:24.582] Server  LOG      ✓ Compiled in 326ms
+[01:33:28.378] Server  LOG      ✓ Compiled in 559ms
+[01:33:30.320] Server  LOG      ✓ Compiled in 230ms
+[01:33:33.226] Server  LOG      ✓ Compiled in 539ms
+[01:33:36.811] Server  LOG      ✓ Compiled in 375ms
+[01:33:41.538] Server  LOG      ✓ Compiled in 575ms
+[01:33:43.211] Server  LOG      ✓ Compiled in 517ms
+[01:33:49.676] Server  LOG      ✓ Compiled in 368ms
+[01:33:51.448] Server  LOG      ✓ Compiled in 248ms
+[01:34:34.495] Server  LOG      ✓ Compiled in 991ms
+[01:34:39.242] Server  LOG      ✓ Compiled in 763ms
+[01:34:41.514] Server  LOG      ✓ Compiled in 333ms
+[01:34:43.500] Server  LOG      ✓ Compiled in 255ms
+[01:34:48.364] Server  LOG      ✓ Compiled in 431ms
+[01:34:52.013] Server  LOG      ✓ Compiled in 383ms
+[01:34:56.723] Server  LOG      ✓ Compiled in 367ms
+[01:35:17.547] Server  LOG      ✓ Compiled in 411ms
+[01:39:21.097] Server  LOG      ✓ Compiled in 342ms

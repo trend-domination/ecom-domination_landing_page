@@ -166,19 +166,6 @@ function Home() {
         autoPlay
     ]);
     const [faqOpenIndex, setFaqOpenIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [faqCardWidth, setFaqCardWidth] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('60%');
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const computeWidth = ()=>{
-            const w = window.innerWidth;
-            if (w <= 640) return '100%';
-            if (w <= 960) return '92%';
-            return '60%';
-        };
-        const onResize = ()=>setFaqCardWidth(computeWidth());
-        setFaqCardWidth(computeWidth());
-        window.addEventListener('resize', onResize);
-        return ()=>window.removeEventListener('resize', onResize);
-    }, []);
     const partnerLogos = [
         {
             src: "/assets/brands/shopify.svg",
@@ -239,7 +226,7 @@ function Home() {
                                                     className: "brand-logo"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 134,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -247,13 +234,13 @@ function Home() {
                                                     children: "EcomDomination"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 142,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 133,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("sup", {
@@ -261,13 +248,13 @@ function Home() {
                                             children: "®"
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 145,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 144,
+                                    lineNumber: 132,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -285,7 +272,7 @@ function Home() {
                                                     children: "Menu"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 156,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -303,18 +290,18 @@ function Home() {
                                                         strokeLinejoin: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 170,
+                                                        lineNumber: 158,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 169,
+                                                    lineNumber: 157,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 148,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -333,12 +320,12 @@ function Home() {
                                                             children: "Découvrir nos services"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 175,
+                                                            lineNumber: 163,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 175,
+                                                        lineNumber: 163,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -349,12 +336,12 @@ function Home() {
                                                             children: "Voir les tarifs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 176,
+                                                            lineNumber: 164,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 176,
+                                                        lineNumber: 164,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -365,12 +352,12 @@ function Home() {
                                                             children: "Portfolio"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 177,
+                                                            lineNumber: 165,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 165,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -395,57 +382,57 @@ function Home() {
                                                                             fill: "#25D366"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 182,
+                                                                            lineNumber: 170,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 181,
+                                                                        lineNumber: 169,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 180,
+                                                                    lineNumber: 168,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 "WhatsApp"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 179,
+                                                            lineNumber: 167,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 178,
+                                                        lineNumber: 166,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 162,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 173,
+                                            lineNumber: 161,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 147,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 143,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                        lineNumber: 142,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -470,7 +457,7 @@ function Home() {
                                                     children: b
                                                 }, i, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 210,
+                                                    lineNumber: 198,
                                                     columnNumber: 19
                                                 }, this)),
                                             [
@@ -482,23 +469,23 @@ function Home() {
                                                     children: b
                                                 }, `dup-${i}`, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 218,
+                                                    lineNumber: 206,
                                                     columnNumber: 19
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                        lineNumber: 204,
+                                        lineNumber: 192,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 203,
+                                    lineNumber: 191,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                lineNumber: 202,
+                                lineNumber: 190,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -514,14 +501,14 @@ function Home() {
                                                 children: "marque e-commerce"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 227,
+                                                lineNumber: 215,
                                                 columnNumber: 44
                                             }, this),
                                             " solide et à maximiser vos ventes !"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                        lineNumber: 226,
+                                        lineNumber: 214,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -530,7 +517,7 @@ function Home() {
                                         children: "Chez EcomDomination, nous vous accompagnons de A à Z dans la création et le développement de votre e-commerce."
                                     }, void 0, false, {
                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 217,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -543,7 +530,7 @@ function Home() {
                                                 children: "Voir nos services"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 233,
+                                                lineNumber: 221,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -567,17 +554,17 @@ function Home() {
                                                                 fill: "#25D366"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 239,
+                                                                lineNumber: 227,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 238,
+                                                            lineNumber: 226,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 225,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -588,7 +575,7 @@ function Home() {
                                                                 children: "Obtenez une consultation gratuite"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 243,
+                                                                lineNumber: 231,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -598,38 +585,38 @@ function Home() {
                                                                         className: "cta-dot"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 244,
+                                                                        lineNumber: 232,
                                                                         columnNumber: 45
                                                                     }, this),
                                                                     "sur WhatsApp"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 244,
+                                                                lineNumber: 232,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 242,
+                                                        lineNumber: 230,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 224,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                        lineNumber: 232,
+                                        lineNumber: 220,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                lineNumber: 225,
+                                lineNumber: 213,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -659,23 +646,23 @@ function Home() {
                                         srcSet: "https://framerusercontent.com/images/893LPrLT3JS7JXQbJxraBeoo8I.png?scale-down-to=512 512w, https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png?scale-down-to=1024 1024w, https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png?scale-down-to=2048 2048w, https://framerusercontent.com/images/922LPrLT3JS7JXQbJxraBeoo8I.png 3072w"
                                     }, void 0, false, {
                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                        lineNumber: 258,
+                                        lineNumber: 246,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 252,
+                                    lineNumber: 240,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                lineNumber: 251,
+                                lineNumber: 239,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                        lineNumber: 195,
+                        lineNumber: 183,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -691,23 +678,23 @@ function Home() {
                                 className: "object-cover select-none pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                lineNumber: 277,
+                                lineNumber: 265,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 276,
+                            lineNumber: 264,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                        lineNumber: 275,
+                        lineNumber: 263,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                lineNumber: 140,
+                lineNumber: 128,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -721,14 +708,14 @@ function Home() {
                                 "De grandes marques nous font confiance",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 296,
+                                    lineNumber: 284,
                                     columnNumber: 13
                                 }, this),
                                 "partout dans le monde"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 294,
+                            lineNumber: 282,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -743,33 +730,33 @@ function Home() {
                                             alt: logo.alt
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 303,
+                                            lineNumber: 291,
                                             columnNumber: 19
                                         }, this)
                                     }, i, false, {
                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 290,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                lineNumber: 300,
+                                lineNumber: 288,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 299,
+                            lineNumber: 287,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                    lineNumber: 293,
+                    lineNumber: 281,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                lineNumber: 292,
+                lineNumber: 280,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -783,7 +770,7 @@ function Home() {
                             children: "Services"
                         }, void 0, false, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 316,
+                            lineNumber: 304,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -793,14 +780,14 @@ function Home() {
                                     children: "Nos services"
                                 }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 317,
+                                    lineNumber: 305,
                                     columnNumber: 42
                                 }, this),
                                 " pour propulser votre e-commerce"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 317,
+                            lineNumber: 305,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -817,12 +804,12 @@ function Home() {
                                                 className: "service-icon-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 321,
+                                                lineNumber: 309,
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 321,
+                                            lineNumber: 309,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -833,7 +820,7 @@ function Home() {
                                                     children: "Création de Sites Shopify"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 323,
+                                                    lineNumber: 311,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -841,7 +828,7 @@ function Home() {
                                                     children: "Nous construisons des sites e‑commerce professionnels sur Shopify, conçus pour maximiser vos ventes et offrir une expérience d’achat fluide."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 324,
+                                                    lineNumber: 312,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -852,19 +839,19 @@ function Home() {
                                                     children: "Parlons de votre site"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 325,
+                                                    lineNumber: 313,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 322,
+                                            lineNumber: 310,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 320,
+                                    lineNumber: 308,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -878,12 +865,12 @@ function Home() {
                                                 className: "service-icon-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 330,
+                                                lineNumber: 318,
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 330,
+                                            lineNumber: 318,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -894,7 +881,7 @@ function Home() {
                                                     children: "Création d’Images Produits"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 332,
+                                                    lineNumber: 320,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -902,7 +889,7 @@ function Home() {
                                                     children: "Nous créons des images de produits professionnelles et percutantes qui séduisent vos clients et boostent vos ventes."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 333,
+                                                    lineNumber: 321,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -913,19 +900,19 @@ function Home() {
                                                     children: "Demandez des exemples"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 334,
+                                                    lineNumber: 322,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 331,
+                                            lineNumber: 319,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 329,
+                                    lineNumber: 317,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -939,12 +926,12 @@ function Home() {
                                                 className: "service-icon-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 339,
+                                                lineNumber: 327,
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 339,
+                                            lineNumber: 327,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -955,7 +942,7 @@ function Home() {
                                                     children: "Des visuels et vidéos qui captent l’attention et stimulent vos ventes !"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 341,
+                                                    lineNumber: 329,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -963,7 +950,7 @@ function Home() {
                                                     children: "Images et vidéos performantes pour vos annonces et pages e‑commerce. Chaque visuel est pensé pour l’engagement et la conversion."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 342,
+                                                    lineNumber: 330,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -974,19 +961,19 @@ function Home() {
                                                     children: "Discutons de vos visuels"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 343,
+                                                    lineNumber: 331,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 340,
+                                            lineNumber: 328,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 338,
+                                    lineNumber: 326,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -1000,12 +987,12 @@ function Home() {
                                                 className: "service-icon-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 348,
+                                                lineNumber: 336,
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 348,
+                                            lineNumber: 336,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1016,7 +1003,7 @@ function Home() {
                                                     children: "Délai rapide"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 350,
+                                                    lineNumber: 338,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1024,19 +1011,19 @@ function Home() {
                                                     children: "La plupart des demandes sont traitées en quelques jours, sans sacrifier la qualité."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 351,
+                                                    lineNumber: 339,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 349,
+                                            lineNumber: 337,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 347,
+                                    lineNumber: 335,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -1050,12 +1037,12 @@ function Home() {
                                                 className: "service-icon-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 356,
+                                                lineNumber: 344,
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 356,
+                                            lineNumber: 344,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1066,7 +1053,7 @@ function Home() {
                                                     children: "Qualité premium"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 358,
+                                                    lineNumber: 346,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1074,19 +1061,19 @@ function Home() {
                                                     children: "Des standards élevés et une attention aux détails, à chaque résultat."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 359,
+                                                    lineNumber: 347,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 357,
+                                            lineNumber: 345,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 355,
+                                    lineNumber: 343,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -1100,12 +1087,12 @@ function Home() {
                                                 className: "service-icon-img"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 364,
+                                                lineNumber: 352,
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 364,
+                                            lineNumber: 352,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1116,7 +1103,7 @@ function Home() {
                                                     children: "100% à vous"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 366,
+                                                    lineNumber: 354,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1124,36 +1111,36 @@ function Home() {
                                                     children: "Des créations sur‑mesure, pleinement adaptées et sous votre contrôle."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 367,
+                                                    lineNumber: 355,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 365,
+                                            lineNumber: 353,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 363,
+                                    lineNumber: 351,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 318,
+                            lineNumber: 306,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                    lineNumber: 315,
+                    lineNumber: 303,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                lineNumber: 314,
+                lineNumber: 302,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1169,7 +1156,7 @@ function Home() {
                                     children: "Comment ça marche"
                                 }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 378,
+                                    lineNumber: 366,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1180,20 +1167,20 @@ function Home() {
                                             children: "processus clair"
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 380,
+                                            lineNumber: 368,
                                             columnNumber: 56
                                         }, this),
                                         " pour un",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 380,
+                                            lineNumber: 368,
                                             columnNumber: 88
                                         }, this),
                                         "e-commerce professionnel et rentable."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 380,
+                                    lineNumber: 368,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1215,13 +1202,13 @@ function Home() {
                                                                         children: "®"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 386,
+                                                                        lineNumber: 374,
                                                                         columnNumber: 63
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 386,
+                                                                lineNumber: 374,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1231,32 +1218,34 @@ function Home() {
                                                                     children: "Assistance 24/7"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 389,
+                                                                    lineNumber: 377,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 388,
+                                                                lineNumber: 376,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                                 className: "process-btn",
-                                                                href: "#",
+                                                                href: "https://wa.me/message/URL4FFGHMAQLD1",
+                                                                target: "_blank",
+                                                                rel: "noopener noreferrer",
                                                                 children: "Discutons de votre projet"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 391,
+                                                                lineNumber: 379,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 385,
+                                                        lineNumber: 373,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 384,
+                                                    lineNumber: 372,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1266,26 +1255,26 @@ function Home() {
                                                             children: "Obtenez une consultation gratuite sur WhatsApp"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 395,
+                                                            lineNumber: 383,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             children: "Parlez-nous de votre projet en quelques minutes. Audit express, recommandations concrètes, sans rendez-vous ni engagement — disponible 24/7."
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 396,
+                                                            lineNumber: 384,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 394,
+                                                    lineNumber: 382,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 383,
+                                            lineNumber: 371,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -1313,7 +1302,7 @@ function Home() {
                                                                                 children: b
                                                                             }, i, false, {
                                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                                lineNumber: 413,
+                                                                                lineNumber: 401,
                                                                                 columnNumber: 27
                                                                             }, this)),
                                                                         [
@@ -1328,18 +1317,18 @@ function Home() {
                                                                                 children: b
                                                                             }, `dup-${i}`, false, {
                                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                                lineNumber: 423,
+                                                                                lineNumber: 411,
                                                                                 columnNumber: 27
                                                                             }, this))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 404,
+                                                                    lineNumber: 392,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 403,
+                                                                lineNumber: 391,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1359,7 +1348,7 @@ function Home() {
                                                                                 children: b
                                                                             }, `r2-${i}`, false, {
                                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                                lineNumber: 437,
+                                                                                lineNumber: 425,
                                                                                 columnNumber: 27
                                                                             }, this)),
                                                                         [
@@ -1374,18 +1363,18 @@ function Home() {
                                                                                 children: b
                                                                             }, `r2-dup-${i}`, false, {
                                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                                lineNumber: 447,
+                                                                                lineNumber: 435,
                                                                                 columnNumber: 27
                                                                             }, this))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 428,
+                                                                    lineNumber: 416,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 427,
+                                                                lineNumber: 415,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1405,7 +1394,7 @@ function Home() {
                                                                                 children: b
                                                                             }, `r3-${i}`, false, {
                                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                                lineNumber: 461,
+                                                                                lineNumber: 449,
                                                                                 columnNumber: 27
                                                                             }, this)),
                                                                         [
@@ -1420,18 +1409,18 @@ function Home() {
                                                                                 children: b
                                                                             }, `r3-dup-${i}`, false, {
                                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                                lineNumber: 471,
+                                                                                lineNumber: 459,
                                                                                 columnNumber: 27
                                                                             }, this))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 452,
+                                                                    lineNumber: 440,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 451,
+                                                                lineNumber: 439,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1441,23 +1430,23 @@ function Home() {
                                                                     alt: "EcomDomination Logomark"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 476,
+                                                                    lineNumber: 464,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 475,
+                                                                lineNumber: 463,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 402,
+                                                        lineNumber: 390,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 401,
+                                                    lineNumber: 389,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1467,26 +1456,26 @@ function Home() {
                                                             children: "Accompagnement"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 481,
+                                                            lineNumber: 469,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             children: "Nous vous accompagnons de bout en bout dans la création et la croissance de votre e‑commerce : site Shopify soigné, visuels produits qui attirent l’attention et campagnes publicitaires tournées vers la conversion. Notre objectif : des résultats concrets et durables."
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 482,
+                                                            lineNumber: 470,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 480,
+                                                    lineNumber: 468,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 400,
+                                            lineNumber: 388,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -1505,12 +1494,12 @@ function Home() {
                                                                     alt: "Folder back"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 489,
+                                                                    lineNumber: 477,
                                                                     columnNumber: 43
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 489,
+                                                                lineNumber: 477,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1523,12 +1512,12 @@ function Home() {
                                                                             alt: "Project shot 1"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 491,
+                                                                            lineNumber: 479,
                                                                             columnNumber: 53
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 491,
+                                                                        lineNumber: 479,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1538,12 +1527,12 @@ function Home() {
                                                                             alt: "Project shot 2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 492,
+                                                                            lineNumber: 480,
                                                                             columnNumber: 53
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 492,
+                                                                        lineNumber: 480,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1553,36 +1542,36 @@ function Home() {
                                                                             alt: "Project shot 3"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 493,
+                                                                            lineNumber: 481,
                                                                             columnNumber: 53
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 493,
+                                                                        lineNumber: 481,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 490,
+                                                                lineNumber: 478,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "front"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 495,
+                                                                lineNumber: 483,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 488,
+                                                        lineNumber: 476,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 487,
+                                                    lineNumber: 475,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1592,43 +1581,43 @@ function Home() {
                                                             children: "Résultats"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 499,
+                                                            lineNumber: 487,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             children: "Votre marque e‑commerce passe un cap : conversion qui grimpe, panier moyen qui progresse, ROAS maîtrisé, acquisition plus rentable et rétention renforcée. Testez vite, apprenez, et scalez sereinement — une identité de marque cohérente et des performances qui parlent d’elles‑mêmes."
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 500,
+                                                            lineNumber: 488,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 498,
+                                                    lineNumber: 486,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 486,
+                                            lineNumber: 474,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 381,
+                                    lineNumber: 369,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 377,
+                            lineNumber: 365,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                        lineNumber: 376,
+                        lineNumber: 364,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1641,25 +1630,25 @@ function Home() {
                                     children: "Témoignages"
                                 }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 510,
+                                    lineNumber: 498,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                     className: "process-title",
                                     children: [
-                                        "Il s’avère que nos clients aiment quand c’est ",
+                                        "Ils aiment quand c'est",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("em", {
-                                            children: "fait."
+                                            children: " bien fait."
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 511,
-                                            columnNumber: 90
+                                            lineNumber: 499,
+                                            columnNumber: 65
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 511,
-                                    columnNumber: 14
+                                    lineNumber: 499,
+                                    columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "testimonials-carousel",
@@ -1684,8 +1673,8 @@ function Home() {
                                                                     alt: "Client"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 519,
-                                                                    columnNumber: 23
+                                                                    lineNumber: 506,
+                                                                    columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "t-meta",
@@ -1695,42 +1684,42 @@ function Home() {
                                                                             children: "Tina Zhang"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 521,
-                                                                            columnNumber: 25
+                                                                            lineNumber: 508,
+                                                                            columnNumber: 23
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             className: "t-role",
-                                                                            children: "Directrice créative, Octave"
+                                                                            children: "Responsable e‑commerce, Octave"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 522,
-                                                                            columnNumber: 25
+                                                                            lineNumber: 509,
+                                                                            columnNumber: 23
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 520,
-                                                                    columnNumber: 23
+                                                                    lineNumber: 507,
+                                                                    columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 518,
-                                                            columnNumber: 21
+                                                            lineNumber: 505,
+                                                            columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             className: "t-quote",
-                                                            children: "La qualité du design est top‑tier et le processus est sans accroc. On a l’impression de tricher tant c’est efficace."
+                                                            children: "Site Shopify livré sans friction, visuels produits qui convertissent et une équipe qui anticipe. Impact visible dès la première campagne."
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 525,
+                                                            lineNumber: 512,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, `card-${idx}`, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 517,
-                                                    columnNumber: 19
+                                                    lineNumber: 504,
+                                                    columnNumber: 17
                                                 }, this)),
                                             [
                                                 0,
@@ -1749,7 +1738,7 @@ function Home() {
                                                                     alt: "Client"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 531,
+                                                                    lineNumber: 518,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1760,7 +1749,7 @@ function Home() {
                                                                             children: "Jared Cole"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 533,
+                                                                            lineNumber: 520,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1768,33 +1757,33 @@ function Home() {
                                                                             children: "Fondateur, Nimbus Systems"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                            lineNumber: 534,
+                                                                            lineNumber: 521,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                    lineNumber: 532,
+                                                                    lineNumber: 519,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 530,
+                                                            lineNumber: 517,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             className: "t-quote",
-                                                            children: "Pas de réunions inutiles, pas de délais, pas de drama. Du design malin livré quand il faut. Je recommande sans réserve."
+                                                            children: "Ils ont structuré nos pages, nos images et nos vidéos ads. Moins de bricolage, plus de ventes. Communication directe sur WhatsApp: efficace."
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 537,
+                                                            lineNumber: 524,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, `dup-card-${idx}`, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 529,
+                                                    lineNumber: 516,
                                                     columnNumber: 19
                                                 }, this)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -1809,7 +1798,7 @@ function Home() {
                                                                 alt: "Client"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 542,
+                                                                lineNumber: 529,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1820,7 +1809,7 @@ function Home() {
                                                                         children: "Alexia Fran"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 544,
+                                                                        lineNumber: 531,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1828,33 +1817,33 @@ function Home() {
                                                                         children: "Marketing Lead, RelayOne"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 545,
+                                                                        lineNumber: 532,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 543,
+                                                                lineNumber: 530,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 541,
+                                                        lineNumber: 528,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "t-quote",
-                                                        children: "J’ai adoré travailler avec Whenever. Inutile d’expliquer deux fois. Le design est arrivé exactement comme je l’avais imaginé."
+                                                        children: "Landing pages et kits visuels prêts à l’emploi. Lancement plus rapide et un lift de conversion mesurable en quelques jours."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 548,
+                                                        lineNumber: 535,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 540,
+                                                lineNumber: 527,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -1869,7 +1858,7 @@ function Home() {
                                                                 alt: "Client"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 553,
+                                                                lineNumber: 540,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1880,7 +1869,7 @@ function Home() {
                                                                         children: "—"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 555,
+                                                                        lineNumber: 542,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1888,19 +1877,19 @@ function Home() {
                                                                         children: "—"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                        lineNumber: 556,
+                                                                        lineNumber: 543,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 554,
+                                                                lineNumber: 541,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 552,
+                                                        lineNumber: 539,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1908,25 +1897,25 @@ function Home() {
                                                         children: "Un aperçu de plus pour que le carousel défile. Ce témoignage fantôme étend la largeur pour permettre le scroll."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 559,
+                                                        lineNumber: 546,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                lineNumber: 551,
+                                                lineNumber: 538,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                        lineNumber: 514,
-                                        columnNumber: 17
+                                        lineNumber: 501,
+                                        columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 513,
-                                    columnNumber: 14
+                                    lineNumber: 500,
+                                    columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "testimonials-dots",
@@ -1941,7 +1930,7 @@ function Home() {
                                             onClick: ()=>scrollToSlide(0)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 565,
+                                            lineNumber: 552,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1952,7 +1941,7 @@ function Home() {
                                             onClick: ()=>scrollToSlide(1)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 566,
+                                            lineNumber: 553,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1963,7 +1952,7 @@ function Home() {
                                             onClick: ()=>scrollToSlide(2)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 567,
+                                            lineNumber: 554,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1974,24 +1963,24 @@ function Home() {
                                             onClick: ()=>scrollToSlide(3)
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 568,
+                                            lineNumber: 555,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 564,
+                                    lineNumber: 551,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 509,
+                            lineNumber: 497,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                        lineNumber: 508,
+                        lineNumber: 496,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1999,54 +1988,29 @@ function Home() {
                         "aria-labelledby": "faq-title",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "faq-card",
-                            style: {
-                                width: faqCardWidth,
-                                border: '3px solid #dedee0',
-                                borderRadius: '22px',
-                                boxShadow: '0 12px 28px rgba(0,0,0,0.08)'
-                            },
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "faq-badge",
-                                    children: "FAQs"
+                                    children: "FAQ"
                                 }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 576,
+                                    lineNumber: 563,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "faq-title",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            id: "faq-title",
-                                            className: "faq-title-line",
-                                            children: "Frequently"
-                                        }, void 0, false, {
-                                            fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 578,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "faq-title-line",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("em", {
-                                                    children: "Asked"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 579,
-                                                    columnNumber: 48
-                                                }, this),
-                                                " Questions"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 579,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        id: "faq-title",
+                                        className: "faq-title-line",
+                                        children: "Ce que se demandent souvent nos clients"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
+                                        lineNumber: 565,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 577,
+                                    lineNumber: 564,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2060,7 +2024,7 @@ function Home() {
                                                     children: "Email"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 584,
+                                                    lineNumber: 569,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2068,29 +2032,29 @@ function Home() {
                                                     children: "contact@ecomdomination.com"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 585,
+                                                    lineNumber: 570,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 583,
+                                            lineNumber: 568,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "#contact",
+                                            href: "https://wa.me/message/URL4FFGHMAQLD1",
                                             className: "faq-cta",
                                             "aria-label": "Commencez votre consultation",
                                             children: "Commencez votre consultation"
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 587,
+                                            lineNumber: 572,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 582,
+                                    lineNumber: 567,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2106,15 +2070,17 @@ function Home() {
                                                     style: {
                                                         display: 'flex',
                                                         alignItems: 'center',
-                                                        justifyContent: 'space-between'
+                                                        justifyContent: 'space-between',
+                                                        paddingRight: '4rem',
+                                                        position: 'relative'
                                                     },
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "faq-item-text",
-                                                            children: "How many design requests can I submit?"
+                                                            children: "Combien de demandes puis-je soumettre ?"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 593,
+                                                            lineNumber: 577,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2129,45 +2095,46 @@ function Home() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 595,
+                                                                lineNumber: 579,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 594,
+                                                            lineNumber: 578,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 592,
+                                                    lineNumber: 576,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "faq-answer-wrap",
                                                     style: {
-                                                        maxHeight: faqOpenIndex === 0 ? 240 : 0,
+                                                        maxHeight: faqOpenIndex === 0 ? 260 : 0,
                                                         opacity: faqOpenIndex === 0 ? 1 : 0,
                                                         overflow: 'hidden',
-                                                        transition: 'max-height .28s ease, opacity .28s ease'
+                                                        transition: 'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s',
+                                                        paddingBottom: faqOpenIndex === 0 ? 6 : 0
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "faq-answer",
-                                                        children: "You can submit as many requests as you’d like. They’ll be handled one at a time, in the order they’re added to your Notion board."
+                                                        children: "Autant que vous le souhaitez. Nous les traitons une par une afin de garantir la qualité et la régularité des livrables."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 599,
+                                                        lineNumber: 583,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 598,
+                                                    lineNumber: 582,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 591,
+                                            lineNumber: 575,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2179,15 +2146,17 @@ function Home() {
                                                     style: {
                                                         display: 'flex',
                                                         alignItems: 'center',
-                                                        justifyContent: 'space-between'
+                                                        justifyContent: 'space-between',
+                                                        paddingRight: '4rem',
+                                                        position: 'relative'
                                                     },
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "faq-item-text",
-                                                            children: "What kind of design work is included?"
+                                                            children: "Quel type de travail est inclus ?"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 604,
+                                                            lineNumber: 588,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2202,45 +2171,46 @@ function Home() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 606,
+                                                                lineNumber: 590,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 605,
+                                                            lineNumber: 589,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 603,
+                                                    lineNumber: 587,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "faq-answer-wrap",
                                                     style: {
-                                                        maxHeight: faqOpenIndex === 1 ? 240 : 0,
+                                                        maxHeight: faqOpenIndex === 1 ? 260 : 0,
                                                         opacity: faqOpenIndex === 1 ? 1 : 0,
                                                         overflow: 'hidden',
-                                                        transition: 'max-height .28s ease, opacity .28s ease'
+                                                        transition: 'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s',
+                                                        paddingBottom: faqOpenIndex === 1 ? 6 : 0
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "faq-answer",
-                                                        children: "Design work typically includes UI/UX, web and app screens, branding assets, and marketing collateral depending on the plan."
+                                                        children: "Création de sites Shopify, images produits, visuels et vidéos publicitaires, landing pages et optimisation orientée conversion. Nous adaptons l’ampleur selon votre besoin."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 610,
+                                                        lineNumber: 594,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 609,
+                                                    lineNumber: 593,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 602,
+                                            lineNumber: 586,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2252,15 +2222,17 @@ function Home() {
                                                     style: {
                                                         display: 'flex',
                                                         alignItems: 'center',
-                                                        justifyContent: 'space-between'
+                                                        justifyContent: 'space-between',
+                                                        paddingRight: '4rem',
+                                                        position: 'relative'
                                                     },
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "faq-item-text",
-                                                            children: "How fast will I receive my designs?"
+                                                            children: "Quel est le délai de livraison ?"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 615,
+                                                            lineNumber: 599,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2275,45 +2247,46 @@ function Home() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 617,
+                                                                lineNumber: 601,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 616,
+                                                            lineNumber: 600,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 614,
+                                                    lineNumber: 598,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "faq-answer-wrap",
                                                     style: {
-                                                        maxHeight: faqOpenIndex === 2 ? 240 : 0,
+                                                        maxHeight: faqOpenIndex === 2 ? 260 : 0,
                                                         opacity: faqOpenIndex === 2 ? 1 : 0,
                                                         overflow: 'hidden',
-                                                        transition: 'max-height .28s ease, opacity .28s ease'
+                                                        transition: 'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s',
+                                                        paddingBottom: faqOpenIndex === 2 ? 6 : 0
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "faq-answer",
-                                                        children: "Most requests are turned around within 24–48 hours. Complex tasks may take longer."
+                                                        children: "La plupart des demandes sont livrées en 24–48h. Les projets plus complexes peuvent demander davantage de temps — nous vous prévenons toujours à l’avance."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 621,
+                                                        lineNumber: 605,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 620,
+                                                    lineNumber: 604,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 613,
+                                            lineNumber: 597,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2325,15 +2298,17 @@ function Home() {
                                                     style: {
                                                         display: 'flex',
                                                         alignItems: 'center',
-                                                        justifyContent: 'space-between'
+                                                        justifyContent: 'space-between',
+                                                        paddingRight: '4rem',
+                                                        position: 'relative'
                                                     },
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "faq-item-text",
-                                                            children: "Can I pause my subscription?"
+                                                            children: "Puis-je mettre en pause ?"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 626,
+                                                            lineNumber: 610,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2348,45 +2323,46 @@ function Home() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 628,
+                                                                lineNumber: 612,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 627,
+                                                            lineNumber: 611,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 625,
+                                                    lineNumber: 609,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "faq-answer-wrap",
                                                     style: {
-                                                        maxHeight: faqOpenIndex === 3 ? 240 : 0,
+                                                        maxHeight: faqOpenIndex === 3 ? 260 : 0,
                                                         opacity: faqOpenIndex === 3 ? 1 : 0,
                                                         overflow: 'hidden',
-                                                        transition: 'max-height .28s ease, opacity .28s ease'
+                                                        transition: 'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s',
+                                                        paddingBottom: faqOpenIndex === 3 ? 6 : 0
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "faq-answer",
-                                                        children: "Yes, you can pause your subscription at any time and resume when you need more design work."
+                                                        children: "Oui. Vous pouvez mettre en pause et reprendre quand vous voulez, sans complexité administrative."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 632,
+                                                        lineNumber: 616,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 631,
+                                                    lineNumber: 615,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 624,
+                                            lineNumber: 608,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2398,15 +2374,17 @@ function Home() {
                                                     style: {
                                                         display: 'flex',
                                                         alignItems: 'center',
-                                                        justifyContent: 'space-between'
+                                                        justifyContent: 'space-between',
+                                                        paddingRight: '4rem',
+                                                        position: 'relative'
                                                     },
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "faq-item-text",
-                                                            children: "What if I need development too?"
+                                                            children: "Et si j’ai besoin de développement aussi ?"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 637,
+                                                            lineNumber: 621,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2421,62 +2399,63 @@ function Home() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                                lineNumber: 639,
+                                                                lineNumber: 623,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                            lineNumber: 638,
+                                                            lineNumber: 622,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 636,
+                                                    lineNumber: 620,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "faq-answer-wrap",
                                                     style: {
-                                                        maxHeight: faqOpenIndex === 4 ? 240 : 0,
+                                                        maxHeight: faqOpenIndex === 4 ? 260 : 0,
                                                         opacity: faqOpenIndex === 4 ? 1 : 0,
                                                         overflow: 'hidden',
-                                                        transition: 'max-height .28s ease, opacity .28s ease'
+                                                        transition: 'max-height .34s cubic-bezier(.22,.61,.36,1), opacity .24s ease .08s',
+                                                        paddingBottom: faqOpenIndex === 4 ? 6 : 0
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "faq-answer",
-                                                        children: "We collaborate with development partners or can integrate with your dev team to ship high-quality products."
+                                                        children: "Oui. Nous collaborons avec vos développeurs ou nos partenaires pour intégrer et livrer des produits de qualité, de bout en bout."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                        lineNumber: 643,
+                                                        lineNumber: 627,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                                    lineNumber: 642,
+                                                    lineNumber: 626,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 635,
+                                            lineNumber: 619,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 590,
+                                    lineNumber: 574,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 575,
+                            lineNumber: 562,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                        lineNumber: 574,
+                        lineNumber: 561,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -2493,13 +2472,13 @@ function Home() {
                                             children: "®"
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 653,
+                                            lineNumber: 637,
                                             columnNumber: 54
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 653,
+                                    lineNumber: 637,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -2512,7 +2491,7 @@ function Home() {
                                             children: "Services"
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 655,
+                                            lineNumber: 639,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2521,7 +2500,7 @@ function Home() {
                                             children: "Mentions légales"
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 656,
+                                            lineNumber: 640,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projets__DEV$2f$ecom$2d$domination$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2532,36 +2511,36 @@ function Home() {
                                             children: "WhatsApp"
                                         }, void 0, false, {
                                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                            lineNumber: 657,
+                                            lineNumber: 641,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                                    lineNumber: 654,
+                                    lineNumber: 638,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                            lineNumber: 652,
+                            lineNumber: 636,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                        lineNumber: 651,
+                        lineNumber: 635,
                         columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-                lineNumber: 374,
+                lineNumber: 362,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Projets DEV/ecom-domination/src/app/page.tsx",
-        lineNumber: 138,
+        lineNumber: 126,
         columnNumber: 5
     }, this);
 }
