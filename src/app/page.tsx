@@ -4,26 +4,39 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const styleProfile: 'doux' | 'dynamique' = 'doux';
-const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Profil de style pour les animations
+type StyleProfile = "doux" | "dynamique";
+const styleProfile: StyleProfile = "doux";
+
+// Préférences de mouvement réduit (sûr côté client)
+const prefersReducedMotion = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Timings selon le profil, sans comparaison directe pour éviter l'erreur TS
+const profileTimings = {
+  doux: { duration: 0.42, ease: [0.22, 0.6, 0.36, 1] },
+  dynamique: { duration: 0.28, ease: [0.17, 0.84, 0.44, 1] },
+} as const;
+
+const profileStagger = { doux: 0.07, dynamique: 0.04 } as const;
+
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: prefersReducedMotion ? { duration: 0 } : (styleProfile === 'dynamique' ? { duration: 0.28, ease: [0.17, 0.84, 0.44, 1] } : { duration: 0.42, ease: [0.22, 0.6, 0.36, 1] }),
+    transition: prefersReducedMotion ? { duration: 0 } : profileTimings[styleProfile],
   },
 };
 const stagger: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: styleProfile === 'dynamique' ? 0.04 : 0.07 } },
+  visible: { transition: { staggerChildren: profileStagger[styleProfile] } },
 };
 const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.985 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: prefersReducedMotion ? { duration: 0 } : (styleProfile === 'dynamique' ? { duration: 0.28, ease: [0.17, 0.84, 0.44, 1] } : { duration: 0.42, ease: [0.22, 0.6, 0.36, 1] }),
+    transition: prefersReducedMotion ? { duration: 0 } : profileTimings[styleProfile],
   },
 };
 
