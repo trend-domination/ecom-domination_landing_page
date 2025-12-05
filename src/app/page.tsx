@@ -1,24 +1,29 @@
 "use client";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+const styleProfile: 'doux' | 'dynamique' = 'doux';
+const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, y: 12 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: prefersReducedMotion ? { duration: 0 } : (styleProfile === 'dynamique' ? { duration: 0.28, ease: [0.17, 0.84, 0.44, 1] } : { duration: 0.42, ease: [0.22, 0.6, 0.36, 1] }),
+  },
 };
 const stagger: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.08 } },
+  visible: { transition: { staggerChildren: styleProfile === 'dynamique' ? 0.04 : 0.07 } },
 };
 const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.98, y: 14 },
+  hidden: { opacity: 0, scale: 0.985 },
   visible: {
     opacity: 1,
     scale: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: prefersReducedMotion ? { duration: 0 } : (styleProfile === 'dynamique' ? { duration: 0.28, ease: [0.17, 0.84, 0.44, 1] } : { duration: 0.42, ease: [0.22, 0.6, 0.36, 1] }),
   },
 };
 
@@ -266,7 +271,76 @@ export default function Home() {
     };
   }, [activeSlide]);
 
+  // Head bar: état de scroll pour hide-on-scroll et shadow au scroll
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 10);
+      // (retiré) headerVisible avec hystérésis: nous gardons la barre visible dès le chargement
+    };
+    window.addEventListener('scroll', onScroll, { passive: true } as AddEventListenerOptions);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll as EventListener);
+  }, []);
+
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(null);
+
+  // Scroll spy: lien actif
+  const [activeSection, setActiveSection] = useState<string>('top');
+  const prefersReducedMotion = useReducedMotion();
+  useEffect(() => {
+    const ids = ['top','services','faq'];
+    const sections = ids
+      .map(id => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+    if (!sections.length) return;
+    const offset = 120; // hauteur de la head bar
+    const onScroll = () => {
+      const y = window.scrollY + offset + 1;
+      let current = 'top';
+      for (const s of sections) {
+        const rect = s.getBoundingClientRect();
+        const top = rect.top + window.scrollY;
+        if (y >= top) current = s.id;
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true } as AddEventListenerOptions);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll as EventListener);
+  }, []);
+
+  // Trap focus dans le menu overlay pour l’accessibilité
+  useEffect(() => {
+    if (!menuOpen || !menuRef.current) return;
+    const container = menuRef.current;
+    const focusable = container.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { e.preventDefault(); setMenuOpen(false); return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+    first?.focus();
+    container.addEventListener('keydown', onKeyDown as EventListener);
+    // aria-hidden sur le contenu derrière
+    const root = document.querySelector('main, body > div');
+    const prevHidden = root?.getAttribute('aria-hidden');
+    root?.setAttribute('aria-hidden','true');
+    return () => {
+      container.removeEventListener('keydown', onKeyDown as EventListener);
+      if (prevHidden !== null) root?.setAttribute('aria-hidden', prevHidden!);
+      else root?.removeAttribute('aria-hidden');
+    };
+  }, [menuOpen]);
 
   const partnerLogos = [
     { src: "/assets/brands/shopify.svg", alt: "Shopify" },
@@ -283,7 +357,12 @@ export default function Home() {
       {/* Header + Hero */}
       <header className="relative">
         {/* Top menu */}
-        <div className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 border-b border-zinc-200">
+        <motion.div
+          initial={false}
+          animate={{ opacity: 1 }}
+           transition={ prefersReducedMotion ? { duration: 0 } : (styleProfile === 'dynamique' ? { type: 'spring', stiffness: 640, damping: 34 } : { type: 'spring', stiffness: 220, damping: 28 }) }
+            className={`fixed top-0 left-0 right-0 z-50 header-premium ${scrolled ? "bg-white shadow-xl border-b border-zinc-200" : "bg-white/40 shadow-none border-b border-transparent"} transition-all duration-300`}
+           >
           <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
             <div className="flex items-center gap-2 sm:gap-3">
               <span className="brand-wordmark">
@@ -300,11 +379,41 @@ export default function Home() {
               </span>
               <sup className="brand-registered">®</sup>
             </div>
+
+            {/* Liens principaux (desktop) */}
+            <ul className="top-links hidden lg:flex items-center gap-6">
+              <li>
+                <a href="#top" className={`top-link ${activeSection === 'top' ? 'is-active' : ''}`} aria-current={activeSection === 'top' ? 'page' : undefined}>Accueil</a>
+              </li>
+              <li>
+                <a href="#services" className={`top-link ${activeSection === 'services' ? 'is-active' : ''}`} aria-current={activeSection === 'services' ? 'page' : undefined}>Services</a>
+              </li>
+              <li>
+                <a href="#faq" className={`top-link ${activeSection === 'faq' ? 'is-active' : ''}`} aria-current={activeSection === 'faq' ? 'page' : undefined}>FAQ</a>
+              </li>
+            </ul>
+
             <div className="flex items-center gap-3 relative">
+              {/* CTA Contact (desktop/tablet) */}
+              <a
+                href="https://wa.me/message/URL4FFGHMAQLD1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white/70 border border-zinc-200 shadow-lg text-zinc-900 font-semibold tracking-tight backdrop-blur-sm transition hover:bg-white hover:shadow-xl hover:-translate-y-0.5"
+                aria-label="Obtenez une consultation gratuite sur WhatsApp"
+              >
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full shadow-inner" aria-hidden>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                    <circle cx="12" cy="12" r="10" fill="#25D366"/>
+                    <path d="M16.67 14.92c-.26.74-1.52 1.35-2.11 1.37-.57.02-1.28.08-4.14-1.31-3.48-1.71-5.72-5.97-5.9-6.26-.18-.28-1.42-1.89-1.42-3.6 0-1.71.88-2.58 1.2-2.93.32-.35.69-.45.92-.45.23 0 .46.01.66.01.22 0 .52-.08.82.61.3.69 1 2.49 1.09 2.67.09.18.14.39.02.64-.12.25-.18.39-.35.61-.17.22-.36.47-.52.63-.17.16-.35.33-.15.69.2.36.88 1.47 1.91 2.39 1.32 1.19 2.45 1.56 2.82 1.73.36.17.56.15.78-.1.22-.24.9-1.04 1.13-1.41.24-.37.48-.3.8-.18.32.12 2.02.96 2.36 1.13.34.17.58.27.67.41.09.15.09.86-.18 1.6z" fill="white"/>
+                  </svg>
+                </span>
+                <span>WhatsApp</span>
+              </a>
               <button
                 type="button"
-                className="menu-trigger"
-                aria-haspopup="menu"
+                className="menu-trigger md:hidden"
+                aria-haspopup="dialog"
                 aria-expanded={menuOpen}
                 aria-controls="topmenu"
                 onClick={() => setMenuOpen((v) => !v)}
@@ -336,19 +445,28 @@ export default function Home() {
                    <button className="menu-overlay-close" onClick={() => setMenuOpen(false)} aria-label="Fermer le menu">Fermer</button>
                  </div>
                  <ul className="menu-overlay-list">
-                   <li><a href="/" className="menu-overlay-link" onClick={() => setMenuOpen(false)}>Accueil</a></li>
-                   <li><a href="#services" className="menu-overlay-link" onClick={() => setMenuOpen(false)}>Services</a></li>
-                   <li><a href="#blog" className="menu-overlay-link" onClick={() => setMenuOpen(false)}>Blog</a></li>
+                   <li>
+                     <a href="#top" className={`menu-overlay-link ${activeSection === 'top' ? 'is-active' : ''}`} aria-current={activeSection === 'top' ? 'page' : undefined} onClick={() => setMenuOpen(false)}>Accueil</a>
+                   </li>
+                   <li>
+                     <a href="#services" className={`menu-overlay-link ${activeSection === 'services' ? 'is-active' : ''}`} aria-current={activeSection === 'services' ? 'page' : undefined} onClick={() => setMenuOpen(false)}>Services</a>
+                   </li>
+                   <li>
+                     <a href="#faq" className={`menu-overlay-link ${activeSection === 'faq' ? 'is-active' : ''}`} aria-current={activeSection === 'faq' ? 'page' : undefined} onClick={() => setMenuOpen(false)}>FAQ</a>
+                   </li>
                  </ul>
                </motion.div>
              )}
              </AnimatePresence>
             </div>
           </nav>
-        </div>
+        </motion.div>
+        {/* Spacer pour éviter que le header fixe ne recouvre le contenu */}
+        <div aria-hidden="true" className="h-16 sm:h-16 md:h-20"></div>
 
         {/* Hero content */}
         <motion.div
+          id="top"
           variants={stagger}
           initial="hidden"
           animate="visible"
@@ -478,7 +596,11 @@ export default function Home() {
               <div className="service-content">
                 <h3 className="service-title">Création de Sites Shopify</h3>
                 <p className="service-desc">Nous construisons des sites e‑commerce professionnels sur Shopify, conçus pour maximiser vos ventes et offrir une expérience d’achat fluide.</p>
-                <a className="service-cta" href="https://wa.me/message/URL4FFGHMAQLD1" target="_blank" rel="noopener noreferrer">Parlons de votre site</a>
+                <a className="service-cta group" href="https://wa.me/message/URL4FFGHMAQLD1" target="_blank" rel="noopener noreferrer">Parlons de votre site
+  <svg className="ml-2 w-5 h-5 transition-transform duration-200" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+    <path d="M1 6h20M21 6l-4-4M21 6l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</a>
               </div>
             </article>
             {/* Images produits */}
@@ -487,7 +609,11 @@ export default function Home() {
               <div className="service-content">
                 <h3 className="service-title">Création d’Images Produits</h3>
                 <p className="service-desc">Nous créons des images de produits professionnelles et percutantes qui séduisent vos clients et boostent vos ventes.</p>
-                <a className="service-cta" href="https://wa.me/message/URL4FFGHMAQLD1" target="_blank" rel="noopener noreferrer">Demandez des exemples</a>
+                <a className="service-cta group" href="https://wa.me/message/URL4FFGHMAQLD1" target="_blank" rel="noopener noreferrer">Demandez des exemples
+  <svg className="ml-2 w-5 h-5 transition-transform duration-200" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+    <path d="M1 6h20M21 6l-4-4M21 6l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</a>
               </div>
             </article>
             {/* Visuels & vidéos */}
@@ -496,7 +622,11 @@ export default function Home() {
               <div className="service-content">
                 <h3 className="service-title">Des visuels et vidéos qui captent l’attention et stimulent vos ventes !</h3>
                 <p className="service-desc">Images et vidéos performantes pour vos annonces et pages e‑commerce. Chaque visuel est pensé pour l’engagement et la conversion.</p>
-                <a className="service-cta" href="https://wa.me/message/URL4FFGHMAQLD1" target="_blank" rel="noopener noreferrer">Discutons de vos visuels</a>
+                <a className="service-cta group" href="https://wa.me/message/URL4FFGHMAQLD1" target="_blank" rel="noopener noreferrer">Discutons de vos visuels
+  <svg className="ml-2 w-5 h-5 transition-transform duration-200" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+    <path d="M1 6h20M21 6l-4-4M21 6l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</a>
               </div>
             </article>
             {/* Valeur ajoutée 1 */}
@@ -596,21 +726,27 @@ export default function Home() {
                   <p>Nous vous accompagnons de bout en bout dans la création et la croissance de votre e‑commerce&nbsp;: site Shopify soigné, visuels produits qui attirent l’attention et campagnes publicitaires tournées vers la conversion. Notre objectif&nbsp;: des résultats concrets et durables.</p>
                 </div>
               </motion.article>
-              {/* Receive - folder with shots */}
-              <motion.article className="process-card receive-card" variants={fadeUp} whileHover={{ y: -3 }}>
+              {/* Receive - results visual */}
+              <motion.article className="process-card receive-card results-card" variants={fadeUp} whileHover={{ y: -3 }}>
                 <div className="process-card-head">
-                  <div className="folder">
-                    <div className="back"><img className="back-img" src="https://framerusercontent.com/images/u6NHrizsQWk4u5sqIM2DGhO2EI.svg" alt="Folder back" /></div>
-                    <div className="front"><img className="front-img" src="https://framerusercontent.com/images/DBQFZbvllIRiYvctCJ768HVNBw.svg" alt="Folder front" /></div>
-                    <div className="shot s1"><img src="https://framerusercontent.com/images/DZ571NqB61IxPsGk6kodp4tHmtM.svg" alt="Shot 1" /></div>
-                    <div className="shot s2"><img src="https://framerusercontent.com/images/0l8sGd6Gq1lE4VFZevjLMMkEQU.svg" alt="Shot 2" /></div>
-                    <div className="shot s3"><img src="https://framerusercontent.com/images/2MaK2mVgQMTILlF4WSn5CiU2YI.svg" alt="Shot 3" /></div>
-                    <div className="shot s4"><img src="https://framerusercontent.com/images/lIeOGtYAcsdA0VyK1CoC6WQnCk.svg" alt="Shot 4" /></div>
+                  <div className="result-visual">
+                    <div className="donut" aria-hidden>
+                      <div className="donut-inner"></div>
+                      <span className="donut-label">ROAS</span>
+                      <span className="donut-value">3.8x</span>
+                    </div>
+                    <div className="stat-line" aria-label="KPIs">
+                      <span className="kpi">CPA <strong>-22%</strong></span>
+                      <span className="dot">•</span>
+                      <span className="kpi">Conversion <strong>+31%</strong></span>
+                      <span className="dot">•</span>
+                      <span className="kpi">Panier moyen <strong>+18€</strong></span>
+                    </div>
                   </div>
                 </div>
                 <div className="process-card-body">
-                  <h3>Livrables</h3>
-                  <p>Recevez des livrables propres et prêts à l’emploi. Nous fournissons les fichiers sources pour une pleine propriété et une évolutivité totale.</p>
+                  <h3>Résultats</h3>
+                  <p>Des résultats mesurables: ROAS en hausse, CPA maîtrisé et taux de conversion en progression. Nous optimisons vos pages et vos visuels pour des performances durables.</p>
                 </div>
               </motion.article>
             </div>
@@ -683,7 +819,7 @@ export default function Home() {
         </motion.section>
 
         {/* FAQ Section */}
-        <section className="faq-section" aria-labelledby="faq-title">
+        <section className="faq-section" id="faq" aria-labelledby="faq-title">
           <div className="faq-card">
             <span className="faq-badge">FAQ</span>
             <div className="faq-title">
@@ -763,7 +899,15 @@ export default function Home() {
           <nav className="footer-right" aria-label="Liens de pied de page">
             <a href="#services" className="footer-link">Services</a>
             <a href="#mentions-legales" className="footer-link">Mentions légales</a>
-            <a href="https://wa.me/message/URL4FFGHMAQLD1" className="footer-link footer-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://wa.me/message/URL4FFGHMAQLD1" className="footer-link footer-whatsapp" target="_blank" rel="noopener noreferrer">
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full shadow-inner" aria-hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <circle cx="12" cy="12" r="10" fill="#25D366"/>
+                  <path d="M16.67 14.92c-.26.74-1.52 1.35-2.11 1.37-.57.02-1.28.08-4.14-1.31-3.48-1.71-5.72-5.97-5.9-6.26-.18-.28-1.42-1.89-1.42-3.6 0-1.71.88-2.58 1.2-2.93.32-.35.69-.45.92-.45.23 0 .46.01.66.01.22 0 .52-.08.82.61.3.69 1 2.49 1.09 2.67.09.18.14.39.02.64-.12.25-.18.39-.35.61-.17.22-.36.47-.52.63-.17.16-.35.33-.15.69.2.36.88 1.47 1.91 2.39 1.32 1.19 2.45 1.56 2.82 1.73.36.17.56.15.78-.1.22-.24.9-1.04 1.13-1.41.24-.37.48-.3.8-.18.32.12 2.02.96 2.36 1.13.34.17.58.27.67.41.09.15.09.86-.18 1.6z" fill="white"/>
+                </svg>
+              </span>
+              <span>WhatsApp</span>
+            </a>
           </nav>
         </div>
       </footer>
