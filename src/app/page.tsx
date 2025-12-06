@@ -510,10 +510,10 @@ export default function Home() {
 
           {/* Left textual content */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            <motion.h1 variants={fadeUp} className="hero-title text-5xl lg:text-[5.5rem] leading-[1.02] tracking-tight">
+            <motion.h1 variants={fadeUp} className="hero-title text-4xl sm:text-5xl lg:text-[5.5rem] leading-tight sm:leading-[1.02] lg:leading-[1.02] tracking-tight">
               Nous vous aidons à bâtir une <span className="accent">marque e-commerce</span> solide et à maximiser vos ventes !
             </motion.h1>
-            <motion.p variants={fadeUp} className="hero-subtitle text-lg lg:text-2xl max-w-2xl">
+            <motion.p variants={fadeUp} className="hero-subtitle text-sm sm:text-lg lg:text-2xl max-w-xl sm:max-w-2xl">
               Chez EcomDomination, nous vous accompagnons de A à Z dans la création et le développement de votre e-commerce.
             </motion.p>
             <motion.div variants={fadeUp} className="hero-actions flex flex-wrap items-center gap-4">
