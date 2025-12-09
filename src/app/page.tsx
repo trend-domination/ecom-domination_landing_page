@@ -576,7 +576,7 @@ export default function Home() {
       </header>
 
       {/* Partenaires (carousel) */}
-      <section className="partners-section">
+      {/* <section className="partners-section">
         <div className="partners-wrap">
           <span className="partners-lead">
             De grandes marques nous font confiance
@@ -593,7 +593,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Le reste des sections existantes suit, non modifiées ici */}
 
@@ -767,13 +767,15 @@ export default function Home() {
         </motion.section>
 
         {/* Témoignages – Slider au pixel près */}
-        <motion.section className="testimonials-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+
+        
+        {/* <motion.section className="testimonials-section" variants={scaleIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <div className="testimonials-wrap">
             <span className="testimonials-pill">Témoignages</span>
             <h2 className="process-title">Ils aiment quand c&apos;est<em> bien fait.</em></h2>
             <div className="testimonials-carousel">
               <div className="testimonials-track" ref={trackRef}>
-              {/* cartes visibles (3 colonnes) */}
+              
               {[0,1,2,3].map((idx) => (
                 <article key={`card-${idx}`} className={`testimonial-card ${idx===3?'ghost':''}`}>
                   <div className="t-head">
@@ -829,7 +831,8 @@ export default function Home() {
               <span className={`dot ${activeSlide === 3 ? 'active dot-pop' : ''}`} role="tab" aria-selected={activeSlide===3} aria-controls="slide-3" onClick={() => scrollToSlide(3)}></span>
             </div>
           </div>
-        </motion.section>
+        </motion.section> */}
+        
 
         {/* FAQ Section */}
         <section className="faq-section" id="faq" aria-labelledby="faq-title">
